@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aroma en Punto — Decants de Lujo en México</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  a { color: inherit; text-decoration: none; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: #FAFAF8; color: #1C1C1A; overflow-x: hidden; }
+
+/* NAV */
+nav {
+position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+display: flex; align-items: center; justify-content: space-between;
+padding: 0 5vw; height: 72px;
+background: rgba(250,250,248,0.96);
+border-bottom: 1px solid #E2E0DA;
+}
+.logo { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 400; letter-spacing: 0.06em; color: #1A3A16; }
+.logo span { color: #6A9E60; font-style: italic; }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+.nav-links a { font-size: 0.82rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: #6B6B67; }
+.nav-links a:hover { color: #2D5A27; }
+.btn-nav { background: #2D5A27; color: #FAFAF8 !important; padding: 0.5rem 1.4rem; border-radius: 2rem; }
+.btn-nav:hover { background: #1A3A16 !important; }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.hamburger span { width: 24px; height: 2px; background: #2D5A27; border-radius: 2px; display: block; }
+
+/* HERO */
+.hero {
+min-height: 100vh; display: flex; align-items: center; justify-content: center;
+padding: 120px 5vw 80px;
+background: radial-gradient(ellipse 70% 60% at 80% 50%, rgba(184,212,176,0.25) 0%, transparent 70%), #FAFAF8;
+}
+.hero-content { max-width: 680px; }
+.hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #6A9E60; margin-bottom: 1.5rem; }
+.hero-tag::before { content: ''; width: 28px; height: 1px; background: #6A9E60; }
+.hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 300; line-height: 1.12; color: #1C1C1A; margin-bottom: 1.4rem; }
+.hero h1 em { font-style: italic; color: #2D5A27; }
+.hero p { font-size: 1.05rem; font-weight: 300; color: #6B6B67; line-height: 1.7; max-width: 480px; margin-bottom: 2.5rem; }
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: #2D5A27; color: #FAFAF8; padding: 0.85rem 2rem; border-radius: 2rem; font-size: 0.88rem; font-weight: 500; box-shadow: 0 4px 20px rgba(45,90,39,0.3); }
+.btn-primary:hover { background: #1A3A16; }
+.btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: #2D5A27; padding: 0.85rem 2rem; border-radius: 2rem; font-size: 0.88rem; font-weight: 500; border: 1.5px solid #B8D4B0; }
+.btn-secondary:hover { border-color: #2D5A27; }
+.hero-stats { display: flex; gap: 3rem; margin-top: 4rem; padding-top: 2.5rem; border-top: 1px solid #E2E0DA; }
+.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: #2D5A27; }
+.stat-label { font-size: 0.75rem; color: #6B6B67; letter-spacing: 0.06em; text-transform: uppercase; }
+
+/* SECTIONS */
+section { padding: 80px 5vw; }
+.section-tag { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #6A9E60; display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem; }
+.section-tag::before { content: ''; width: 22px; height: 1px; background: #6A9E60; }
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.2; color: #1C1C1A; }
+.section-title em { font-style: italic; color: #2D5A27; }
+
+/* HOW IT WORKS */
+.how { background: #F3F2EF; }
+.how-header { text-align: center; margin-bottom: 4rem; }
+.how-header .section-tag { justify-content: center; }
+.how-header .section-tag::before { display: none; }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 900px; margin: 0 auto; }
+.step { text-align: center; padding: 2.5rem 2rem; background: #FAFAF8; border: 1px solid #E2E0DA; border-radius: 1rem; }
+.step-number { width: 52px; height: 52px; border-radius: 50%; background: #2D5A27; color: #FAFAF8; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; }
+.step h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 400; margin-bottom: 0.6rem; }
+.step p { font-size: 0.88rem; color: #6B6B67; line-height: 1.6; }
+
+/* CATALOG */
+.catalog-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem; }
+.filter-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.filter-btn { padding: 0.45rem 1.1rem; border-radius: 2rem; font-size: 0.78rem; font-weight: 500; border: 1.5px solid #E2E0DA; background: transparent; color: #6B6B67; cursor: pointer; }
+.filter-btn.active, .filter-btn:hover { background: #2D5A27; color: #FAFAF8; border-color: #2D5A27; }
+.perfume-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
+.perfume-card { background: #FAFAF8; border: 1px solid #E2E0DA; border-radius: 1rem; overflow: hidden; cursor: pointer; }
+.perfume-card:hover { box-shadow: 0 12px 40px rgba(45,90,39,0.12); }
+.card-img { width: 100%; aspect-ratio: 4/3; background: linear-gradient(135deg, #F3F2EF, #B8D4B0); display: flex; align-items: center; justify-content: center; position: relative; }
+.card-img-placeholder { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; color: #2D5A27; opacity: 1; }
+.card-badge { position: absolute; top: 12px; right: 12px; background: #2D5A27; color: #FAFAF8; font-size: 0.68rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.7rem; border-radius: 2rem; }
+.card-body { padding: 1.4rem; }
+.card-brand { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #6A9E60; margin-bottom: 0.3rem; }
+.card-name { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 400; margin-bottom: 0.5rem; }
+.card-desc { font-size: 0.82rem; color: #6B6B67; line-height: 1.5; margin-bottom: 1rem; }
+.card-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1.1rem; }
+.tag { font-size: 0.68rem; padding: 0.25rem 0.65rem; border-radius: 2rem; background: #F3F2EF; color: #6B6B67; border: 1px solid #E2E0DA; }
+.card-btn { width: 100%; padding: 0.7rem; border-radius: 0.5rem; font-size: 0.82rem; font-weight: 500; border: none; cursor: pointer; background: #2D5A27; color: #FAFAF8; }
+.card-btn:hover { background: #1A3A16; }
+
+/* TRUST */
+.trust { background: #1A3A16; }
+.trust .section-title { color: #FAFAF8; }
+.trust .section-tag { color: #B8D4B0; }
+.trust .section-tag::before { background: #B8D4B0; }
+.trust-header { margin-bottom: 3rem; }
+.trust-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem; }
+.trust-item { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 2rem 1.5rem; text-align: center; }
+.trust-item:hover { background: rgba(255,255,255,0.12); }
+.trust-icon { width: 52px; height: 52px; border-radius: 50%; background: rgba(184,212,176,0.2); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.4rem; }
+.trust-item h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; color: #FAFAF8; margin-bottom: 0.4rem; }
+.trust-item p { font-size: 0.82rem; color: rgba(255,255,255,0.55); line-height: 1.5; }
+
+/* FOOTER */
+footer { background: #1C1C1A; color: rgba(255,255,255,0.7); padding: 4rem 5vw 2rem; }
+.footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: #FAFAF8; margin-bottom: 0.8rem; }
+.footer-logo span { color: #B8D4B0; font-style: italic; }
+.footer-desc { font-size: 0.85rem; line-height: 1.7; max-width: 280px; }
+.footer-col h5 { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #B8D4B0; margin-bottom: 1.2rem; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 0.6rem; }
+.footer-col a { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+.footer-col a:hover { color: #FAFAF8; }
+.footer-social { display: flex; gap: 0.75rem; margin-top: 1.5rem; }
+.social-btn { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.7); font-size: 1rem; }
+.social-btn:hover { background: #2D5A27; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+
+/* MODAL */
+.modal-overlay { position: fixed; inset: 0; z-index: 1000; background: rgba(10,20,10,0.75); display: none; align-items: center; justify-content: center; padding: 1rem; }
+.modal-overlay.open { display: flex; }
+.modal { background: #FAFAF8; border-radius: 1.2rem; max-width: 740px; width: 100%; max-height: 90vh; overflow-y: auto; box-shadow: 0 40px 100px rgba(0,0,0,0.35); }
+.modal-header-img { width: 100%; height: 200px; background: linear-gradient(135deg, #F3F2EF, #B8D4B0); display: flex; align-items: center; justify-content: center; position: relative; border-radius: 1.2rem 1.2rem 0 0; overflow: hidden; }
+.modal-img-letter { font-family: 'Cormorant Garamond', serif; font-size: 6rem; font-weight: 300; color: #2D5A27; opacity: 1; }
+.modal-close { position: absolute; top: 1rem; right: 1rem; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.9); border: 1px solid #E2E0DA; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; color: #6B6B67; }
+.modal-body { padding: 2rem 2.5rem 2.5rem; }
+.modal-brand { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #6A9E60; margin-bottom: 0.3rem; }
+.modal-name { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; margin-bottom: 0.8rem; }
+.modal-desc { font-size: 0.92rem; color: #6B6B67; line-height: 1.7; margin-bottom: 1.8rem; }
+.modal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.8rem; }
+.modal-info-box { background: #F3F2EF; border-radius: 0.75rem; padding: 1rem 1.2rem; }
+.modal-info-box .label { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #6B6B67; margin-bottom: 0.3rem; }
+.modal-info-box .value { font-size: 0.92rem; color: #1C1C1A; }
+.notes-section { margin-bottom: 1.8rem; }
+.notes-title { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #6B6B67; margin-bottom: 0.8rem; }
+.notes-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+.note-group { flex: 1; min-width: 120px; }
+.note-group-label { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #6A9E60; margin-bottom: 0.4rem; }
+.note-pills { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.note-pill { font-size: 0.73rem; padding: 0.25rem 0.65rem; border-radius: 2rem; background: #FAFAF8; border: 1px solid #E2E0DA; color: #1C1C1A; }
+.size-section { margin-bottom: 1.8rem; }
+.size-title { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #6B6B67; margin-bottom: 0.8rem; }
+.size-options { display: flex; gap: 0.75rem; }
+.size-btn { flex: 1; padding: 0.9rem; border-radius: 0.75rem; border: 2px solid #E2E0DA; background: #FAFAF8; cursor: pointer; text-align: center; }
+.size-btn:hover { border-color: #6A9E60; }
+.size-btn.selected { border-color: #2D5A27; background: rgba(45,90,39,0.06); }
+.size-ml { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 300; color: #1C1C1A; }
+.size-label { font-size: 0.7rem; color: #6B6B67; margin-top: 0.15rem; }
+.size-price { font-size: 0.85rem; font-weight: 500; color: #2D5A27; margin-top: 0.2rem; }
+.modal-actions { display: flex; gap: 1rem; }
+.btn-whatsapp { flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.6rem; background: #25D366; color: #FAFAF8; padding: 1rem; border-radius: 0.75rem; font-size: 0.92rem; font-weight: 500; border: none; cursor: pointer; box-shadow: 0 4px 20px rgba(37,211,102,0.35); }
+.btn-whatsapp:hover { background: #1eb859; }
+
+/* FLOATING WA */
+.float-wa { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 90; width: 56px; height: 56px; border-radius: 50%; background: #25D366; color: #FAFAF8; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 6px 24px rgba(37,211,102,0.5); }
+.float-wa:hover { transform: scale(1.1); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+.nav-links { display: none; }
+.nav-links.open { display: flex; flex-direction: column; gap: 0; position: fixed; top: 72px; left: 0; right: 0; background: #FAFAF8; padding: 1rem 0; border-bottom: 1px solid #E2E0DA; }
+.nav-links.open li { border-bottom: 1px solid #E2E0DA; }
+.nav-links.open a { display: block; padding: 0.9rem 5vw; }
+.hamburger { display: flex; }
+.hero-stats { gap: 1.5rem; }
+.steps { grid-template-columns: 1fr; }
+.footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+.modal-body { padding: 1.5rem; }
+.modal-grid { grid-template-columns: 1fr; }
+.modal-actions { flex-direction: column; }
+.catalog-header { flex-direction: column; align-items: flex-start; }
+.size-options { flex-direction: column; }
+}
+</style>
+
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">Aroma en <span>Punto</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#catalogo">Catálogo</a></li>
+    <li><a href="#como-funciona">Cómo funciona</a></li>
+    <li><a href="https://wa.me/523141619220" target="_blank" class="btn-nav">Contacto</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <div class="hero-tag">Decants Originales · México</div>
+    <h1>Descubre fragancias de <em>lujo</em> sin pagar de más</h1>
+    <p>Decants originales en presentaciones de 3ml, 5ml y 10ml. Prueba antes de invertir en el frasco completo.</p>
+    <div class="hero-actions">
+      <a href="#catalogo" class="btn-primary">Explorar catálogo →</a>
+      <a href="#como-funciona" class="btn-secondary">Cómo funciona</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-num">22+</div><div class="stat-label">Fragancias</div></div>
+      <div><div class="stat-num">3</div><div class="stat-label">Tamaños</div></div>
+      <div><div class="stat-num">100%</div><div class="stat-label">Originales</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="como-funciona">
+  <div class="how-header">
+    <div class="section-tag">Proceso</div>
+    <h2 class="section-title">Tan fácil como <em>tres pasos</em></h2>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-number">1</div>
+      <h3>Elige tu perfume</h3>
+      <p>Explora nuestro catálogo con descripciones detalladas de notas, proyección y tipo de uso.</p>
+    </div>
+    <div class="step">
+      <div class="step-number">2</div>
+      <h3>Selecciona el tamaño</h3>
+      <p>Disponible en 3ml, 5ml y 10ml. Prueba primero o llévate tu favorito en tamaño de viaje.</p>
+    </div>
+    <div class="step">
+      <div class="step-number">3</div>
+      <h3>Ordena por WhatsApp</h3>
+      <p>Te enviamos un mensaje prellenado. Confirma, paga fácilmente y recibe en tu puerta.</p>
+    </div>
+  </div>
+</section>
+
+<section id="catalogo">
+  <div class="catalog-header">
+    <div>
+      <div class="section-tag">Catálogo</div>
+      <h2 class="section-title">Nuestra colección <em>selecta</em></h2>
+    </div>
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterCatalog('todos', this)">Todos</button>
+      <button class="filter-btn" onclick="filterCatalog('fresco', this)">Fresco</button>
+      <button class="filter-btn" onclick="filterCatalog('oriental', this)">Oriental</button>
+      <button class="filter-btn" onclick="filterCatalog('amaderado', this)">Amaderado</button>
+      <button class="filter-btn" onclick="filterCatalog('floral', this)">Floral</button>
+    </div>
+  </div>
+  <div class="perfume-grid" id="perfumeGrid"></div>
+</section>
+
+<section class="trust">
+  <div class="trust-header">
+    <div class="section-tag">Garantía</div>
+    <h2 class="section-title">Por qué elegir <em>Aroma en Punto</em></h2>
+  </div>
+  <div class="trust-grid">
+    <div class="trust-item"><div class="trust-icon">✦</div><h4>100% Original</h4><p>Todos nuestros decants provienen de frascos originales. Sin imitaciones, sin diluciones.</p></div>
+    <div class="trust-item"><div class="trust-icon">⬡</div><h4>Preparados con cuidado</h4><p>Cada decant es llenado cuidadosamente para garantizar la experiencia olfativa completa.</p></div>
+    <div class="trust-item"><div class="trust-icon">◈</div><h4>Envíos en México</h4><p>Enviamos a toda la República Mexicana. Empaque seguro para proteger tu fragancia.</p></div>
+    <div class="trust-item"><div class="trust-icon">◎</div><h4>Atención personalizada</h4><p>Respuesta rápida por WhatsApp. Te ayudamos a encontrar tu fragancia ideal.</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Aroma en <span>Punto</span></div>
+      <p class="footer-desc">Fragancias originales en decants accesibles. Lujo a tu medida, directo a tu puerta.</p>
+      <div class="footer-social">
+        <a href="https://wa.me/523141619220" target="_blank" class="social-btn">📱</a>
+        <a href="#" class="social-btn">📸</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Navegación</h5>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#como-funciona">Cómo funciona</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contacto</h5>
+      <ul>
+        <li><a href="https://wa.me/523141619220" target="_blank">+52 314 161 9220</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Aroma en Punto Decants · México</span>
+    <span>Fragancias originales en decants accesibles</span>
+  </div>
+</footer>
+
+<a href="https://wa.me/523141619220" target="_blank" class="float-wa">💬</a>
+
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal">
+    <div class="modal-header-img">
+      <div class="modal-img-letter" id="modalLetter">E</div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-brand" id="modalBrand"></div>
+      <div class="modal-name" id="modalName"></div>
+      <div class="modal-desc" id="modalDesc"></div>
+      <div class="modal-grid">
+        <div class="modal-info-box"><div class="label">Tipo de uso</div><div class="value" id="modalUso"></div></div>
+        <div class="modal-info-box"><div class="label">Duración aproximada</div><div class="value" id="modalDuracion"></div></div>
+        <div class="modal-info-box"><div class="label">Proyección</div><div class="value" id="modalProyeccion"></div></div>
+        <div class="modal-info-box"><div class="label">Familia olfativa</div><div class="value" id="modalFamilia"></div></div>
+      </div>
+      <div class="notes-section">
+        <div class="notes-title">Pirámide olfativa</div>
+        <div class="notes-row">
+          <div class="note-group"><div class="note-group-label">Salida</div><div class="note-pills" id="modalTopNotes"></div></div>
+          <div class="note-group"><div class="note-group-label">Corazón</div><div class="note-pills" id="modalMidNotes"></div></div>
+          <div class="note-group"><div class="note-group-label">Fondo</div><div class="note-pills" id="modalBaseNotes"></div></div>
+        </div>
+      </div>
+      <div class="size-section">
+        <div class="size-title">Selecciona tu presentación</div>
+        <div class="size-options" id="sizeOptions"></div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn-whatsapp" onclick="openWhatsApp()">💬 Ordenar por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var perfumes = [
+  { id:1, nombre:"L'Immensité", marca:"Louis Vuitton",imagen:"images/limmensite.png",categoria:"fresco", desc:"Fragancia masculina icónica que evoca la libertad de horizontes infinitos. Cítricos brillantes y jengibre chispeante sobre una base amaderada cálida y sensual.", uso:"Diario · Oficina · Primavera-Verano", duracion:"6-8 horas", proyeccion:"Media-fuerte", familia:"Cítrico aromático", top:["Toronja","Bergamota","Jengibre"], mid:["Romero","Salvia","Notas acuáticas","Geranio"], base:["Ambroxan","Ámbar","Labdanum"], badge:"Premium", precios:{"3":"$255 MXN","5":"$470 MXN","10":"$900 MXN"} },
+
+  { id:2, nombre:"Santal 33", marca:"Le Labo",imagen:"images/santal.png",categoria:"amaderado", desc:"El perfume de culto de la última década. Sándalo australiano, cuero y cardamomo crean una fragancia hipnótica y adictiva, perfecta en hombres y mujeres.", uso:"Diario · Firma personal · Todo el año", duracion:"6-8 horas", proyeccion:"Suave-media", familia:"Amaderado aromático", top:["Cardamomo","Violeta","Iris"], mid:["Sándalo australiano","Madera de cedro"], base:["Cuero","Ámbar","Almizcle"], badge:"Cult", precios:{"3":"$205 MXN","5":"$370 MXN","10":"$700 MXN"} },
+
+  { id:3, nombre:"Erba Pura", marca:"Xerjoff",imagen:"images/erba.png",categoria:"fresco", desc:"Explosión de frutas mediterráneas y cítricos sicilianos sobre una base cremosa de vainilla y almizcle. Fresco, alegre y adictivo: la esencia del verano italiano.", uso:"Diario · Verano · Primavera", duracion:"6-9 horas", proyeccion:"Fuerte", familia:"Frutal oriental", top:["Naranja de Sicilia","Limón","Bergamota de Calabria"], mid:["Frutas mediterráneas"], base:["Almizcle blanco","Vainilla de Madagascar","Ámbar"], badge:null, precios:{"3":"$180 MXN","5":"$320 MXN","10":"$600 MXN"} },
+
+  { id:4, nombre:"Millésime Impérial", marca:"Creed",imagen:"images/creed.png",categoria:"fresco", desc:"La fragancia de los reyes. Cítricos brillantes sobre un acorde marino salado y una base amaderada cálida. Refinamiento atemporal, de la oficina a una noche especial.", uso:"Diario · Oficina · Eventos", duracion:"5-8 horas", proyeccion:"Suave-media", familia:"Cítrico marino", top:["Notas frutales","Sal marina","Bergamota"], mid:["Limón de Sicilia","Iris","Mandarina"], base:["Notas marinas","Almizcle","Cedro"], badge:"Exclusivo", precios:{"3":"$230 MXN","5":"$420 MXN","10":"$800 MXN"} },
+
+  { id:5, nombre:"Le Beau", marca:"Jean Paul Gaultier",imagen:"images/jpg_lebeau.png",categoria:"fresco", desc:"El hombre seductor en verano. Bergamota chispeante y madera de coco tropical crean una fragancia fresca, dulce y magnéticamente atractiva.", uso:"Verano · Diario · Citas", duracion:"5-7 horas", proyeccion:"Media", familia:"Aromático amaderado", top:["Bergamota"], mid:["Madera de coco"], base:["Tonka bean","Cedro"], badge:null, precios:{"3":"$105 MXN","5":"$175 MXN","10":"$310 MXN"} },
+
+  { id:6, nombre:"Le Male Elixir", marca:"Jean Paul Gaultier",imagen:"images/jpg_elixir.png",categoria:"oriental", desc:"El marinero más seductor. Lavanda fresca y menta explosiva se transforman en una base de tonka, benjuí y miel increíblemente adictiva. Beast mode en la piel.", uso:"Noches · Otoño-Invierno · Citas", duracion:"10+ horas", proyeccion:"Fuerte", familia:"Ámbar aromático", top:["Menta","Lavanda"], mid:["Tonka bean","Benjuí"], base:["Miel","Tabaco","Vainilla"], badge:"Bestseller", precios:{"3":"$105 MXN","5":"$175 MXN","10":"$310 MXN"} },
+
+  { id:7, nombre:"Le Male", marca:"Jean Paul Gaultier",imagen:"images/jpg_leparfum.png",categoria:"oriental", desc:"El clásico moderno de la perfumería masculina. Lavanda, menta y vainilla en una composición icónica que ha conquistado millones de seguidores desde 1995.", uso:"Diario · Citas · Todo el año", duracion:"6-8 horas", proyeccion:"Media", familia:"Oriental fougère", top:["Menta","Lavanda","Cardamomo"], mid:["Orris","Canela","Flor de naranjo"], base:["Vainilla","Almizcle blanco","Sándalo"], badge:null, precios:{"3":"$105 MXN","5":"$175 MXN","10":"$310 MXN"} },
+
+  { id:8, nombre:"The Most Wanted EDP", marca:"Azzaro",imagen:"images/azzaro.png",categoria:"oriental", desc:"Dulce, especiado y magnéticamente seductor. Cardamomo y toffee se mezclan con una base amaderada irresistible. Fragancia de complidos garantizados.", uso:"Noches · Otoño-Invierno · Citas", duracion:"7-9 horas", proyeccion:"Media-fuerte", familia:"Oriental especiado", top:["Cardamomo"], mid:["Toffee"], base:["Ámbar","Madera"], badge:null, precios:{"3":"$80 MXN","5":"$125 MXN","10":"$210 MXN"} },
+
+  { id:9, nombre:"Acqua di Giò Profondo EDP", marca:"Giorgio Armani",imagen:"images/adg.png",categoria:"fresco", desc:"El Mediterráneo en su versión más profunda. Notas marinas y cítricas brillantes sobre lavanda, ciprés y una base amaderada con almizcle. Moderno y versátil.", uso:"Diario · Primavera-Verano · Oficina", duracion:"6-8 horas", proyeccion:"Media", familia:"Acuático aromático", top:["Notas marinas","Mandarina","Bergamota"], mid:["Lavanda","Ciprés","Romero"], base:["Pachulí","Almizcle","Incienso","Ámbar"], badge:null, precios:{"3":"$100 MXN","5":"$160 MXN","10":"$280 MXN"} },
+
+  { id:10, nombre:"Born in Roma Intense", marca:"Valentino",imagen:"images/valentino.png",categoria:"oriental", desc:"La masculinidad romana en su versión más intensa. Lavanda y vainilla bourbon se fusionan en una fragancia elegante, cálida y profundamente seductora.", uso:"Noches · Otoño-Invierno · Eventos", duracion:"8-10 horas", proyeccion:"Media-fuerte", familia:"Oriental vainilla", top:["Lavanda","Pimienta negra"], mid:["Iris","Geranio"], base:["Vainilla bourbon","Ámbar","Almizcle"], badge:null, precios:{"3":"$140 MXN","5":"$235 MXN","10":"$430 MXN"} },
+
+  { id:11, nombre:"Bleu de Chanel Parfum", marca:"Chanel",imagen:"images/bdc.png",categoria:"amaderado", desc:"El epítome de la elegancia masculina. Cítricos limpios y una base de cedro, sándalo e incienso crean la fragancia más icónica y versátil de los últimos años.", uso:"Todo el año · Oficina · Eventos · Citas", duracion:"8-10 horas", proyeccion:"Media", familia:"Aromático amaderado", top:["Bergamota","Lima","Limón","Menta"], mid:["Jengibre","Nuez moscada","Jazmín"], base:["Incienso","Cedro","Sándalo","Ámbar"], badge:"Clásico", precios:{"3":"$145 MXN","5":"$250 MXN","10":"$460 MXN"} },
+
+  { id:12, nombre:"Allure Homme Sport", marca:"Chanel",imagen:"images/allure.png",categoria:"fresco", desc:"El hombre activo y sofisticado. Cítricos vibrantes y notas frescas con base amaderada suave y especiada. Elegante, sin esfuerzo, para cualquier ocasión.", uso:"Diario · Verano · Primavera · Oficina", duracion:"5-7 horas", proyeccion:"Suave-media", familia:"Cítrico aromático", top:["Naranja","Limón","Mandarina"], mid:["Neroli","Almizcle"], base:["Vainilla","Cedro","Sándalo"], badge:null, precios:{"3":"$140 MXN","5":"$235 MXN","10":"$430 MXN"} },
+
+  { id:13, nombre:"Bad Boy Cobalt", marca:"Carolina Herrera",imagen:"images/colbalt.png",categoria:"fresco", desc:"Audaz y moderno. Una apertura dulce afrutada con un corazón fresco y especiado que se convierte en una base amaderada oscura e irresistible. Ideal para destacar.", uso:"Diario · Citas · Eventos · Verano", duracion:"7-9 horas", proyeccion:"Media-fuerte", familia:"Aromático amaderado", top:["Lavanda","Ciruela"], mid:["Cedro","Vetiver"], base:["Madera","Almizcle"], badge:null, precios:{"3":"$110 MXN","5":"$175 MXN","10":"$310 MXN"} },
+
+  { id:14, nombre:"Invictus Victory Elixir", marca:"Paco Rabanne",imagen:"images/invictus.png",categoria:"oriental", desc:"La victoria en su forma más intensa. Coco cremoso, vainilla y especias sobre una base profunda y envolvente. El ganador absoluto de los complidos nocturnos.", uso:"Noches · Otoño-Invierno · Eventos", duracion:"8-10 horas", proyeccion:"Fuerte", familia:"Oriental amaderado", top:["Coco","Especias"], mid:["Vainilla","Sándalo"], base:["Ámbar","Almizcle","Pachulí"], badge:"Exclusivo", precios:{"3":"$115 MXN","5":"$190 MXN","10":"$340 MXN"} },
+
+  { id:15, nombre:"Sauvage EDT", marca:"Dior",imagen:"images/sauvage.png",categoria:"fresco", desc:"El salvaje más elegante del mundo. Bergamota calabresa y pimienta Sichuan sobre una base de ambroxan y cedro. La fragancia masculina más vendida del planeta.", uso:"Todo el año · Diario · Oficina · Citas", duracion:"6-9 horas", proyeccion:"Fuerte", familia:"Aromático fresco", top:["Bergamota de Calabria","Pimienta Sichuan"], mid:["Lavanda","Vetiver","Geranio"], base:["Ambroxan","Cedro","Labdanum"], badge:"Más vendido", precios:{"3":"$115 MXN","5":"$190 MXN","10":"$340 MXN"} },
+
+  { id:16, nombre:"Explorer Platinum", marca:"Montblanc",imagen:"images/montblanc.png",categoria:"fresco", desc:"La aventura a gran altitud. Hojas de violeta, salvia y cedro de Alaska crean una fragancia fresca, sofisticada y limpia para el hombre moderno.", uso:"Diario · Oficina · Primavera", duracion:"6-8 horas", proyeccion:"Media", familia:"Aromático amaderado", top:["Hojas de violeta","Toronja"], mid:["Salvia","Ciprés","Musgo"], base:["Cedro de Alaska","Ámbar","Almizcle"], badge:null, precios:{"3":"$80 MXN","5":"$115 MXN","10":"$190 MXN"} },
+
+  { id:17, nombre:"Dior Homme Cologne", marca:"Dior",imagen:"images/homme.png",categoria:"fresco", desc:"El dandy francés en su versión más ligera y luminosa. Toronja fresca y bergamota con un corazón floral de iris sutil. Elegancia pura y sin esfuerzo.", uso:"Diario · Primavera-Verano · Oficina", duracion:"4-6 horas", proyeccion:"Suave", familia:"Cítrico floral", top:["Toronja","Bergamota"], mid:["Iris","Salvia"], base:["Vetiver","Cedro","Almizcle"], badge:null, precios:{"3":"$120 MXN","5":"$195 MXN","10":"$350 MXN"} },
+
+  { id:18, nombre:"MYSLF Le Parfum", marca:"Yves Saint Laurent",imagen:"images/ysl.png",categoria:"floral", desc:"La masculinidad moderna redefinida. Flor de naranjo absoluta de Túnez y bergamota sobre una base de madera cálida, pimienta negra y vainilla bourbon adictiva.", uso:"Todo el año · Citas · Eventos · Oficina", duracion:"7-9 horas", proyeccion:"Media", familia:"Floral amaderado", top:["Bergamota","Pimienta negra"], mid:["Flor de naranjo absoluta"], base:["Madera","Vainilla bourbon","Pachulí"], badge:"Trendy", precios:{"3":"$135 MXN","5":"$225 MXN","10":"$410 MXN"} },
+
+  { id:19, nombre:"Full House", marca:"Game of Spades · Jo Milano",imagen:"images/fullhouse.png",categoria:"fresco", desc:"Cítricos sicilianos electrizantes con especias cálidas y una base amaderada oscura e intrigante. Proyección notable y versátil. Inspirado en Louis Vuitton Imagination.", uso:"Diario · Primavera-Verano · Todo el año", duracion:"5-7 horas", proyeccion:"Media-fuerte", familia:"Cítrico especiado", top:["Citron","Bergamota","Naranja de Sicilia"], mid:["Jengibre","Neroli","Canela"], base:["Té negro","Ambroxan","Madera de guayacán","Olíbano"], badge:null, precios:{"3":"$105 MXN","5":"$170 MXN","10":"$300 MXN"} },
+
+  { id:20, nombre:"Wildcard", marca:"Game of Spades · Jo Milano",imagen:"images/wildcard.png",categoria:"floral", desc:"La carta inesperada. Bergamota y coriandro frescos fluyen hacia un corazón de manzana y vainilla, terminando en una base amaderada cálida. Unisex y muy versátil.", uso:"Todo el año · Diario · Eventos", duracion:"6-8 horas", proyeccion:"Media", familia:"Floral amaderado", top:["Bergamota","Flores","Coriandro"], mid:["Manzana","Ambroxan","Vainilla"], base:["Tonka bean","Ambergris","Madera"], badge:null, precios:{"3":"$100 MXN","5":"$160 MXN","10":"$285 MXN"} },
+
+  { id:21, nombre:"Esmeralda", marca:"Game of Spades · Jo Milano",imagen:"images/emerald.png",categoria:"fresco", desc:"Frescura brillante y limpia. Bergamota, toronja y jengibre abren paso a un corazón floral de azahar y neroli, terminando en almizcle suave y moderno. Elegancia accesible.", uso:"Diario · Primavera-Verano · Oficina", duracion:"6-7 horas", proyeccion:"Media", familia:"Cítrico floral", top:["Bergamota","Toronja","Jengibre"], mid:["Flor de naranjo","Neroli","Jengibre"], base:["Almizcle","Ambrette"], badge:null, precios:{"3":"$105 MXN","5":"$170 MXN","10":"$300 MXN"} },
+
+  { id:22, nombre:"Rouge", marca:"Game of Spades · Jo Milano",imagen:"images/rouge.png",categoria:"oriental", desc:"El dupe más querido del Baccarat Rouge 540. Dulce, cálido y sumamente envolvente. Amberwood y ambergris crean un rastro mágico e inolvidable. Para quien quiere impactar.", uso:"Noches · Eventos · Citas · Otoño-Invierno", duracion:"8-10 horas", proyeccion:"Media-fuerte", familia:"Floral amaderado", top:["Jazmín","Bergamota","Lavanda"], mid:["Amberwood","Ambergris"], base:["Notas amaderadas","Almizcle"], badge:"Fan Fav", precios:{"3":"$95 MXN","5":"$145 MXN","10":"$250 MXN"} }
+];
+
+var selectedSize = null;
+var currentPerfume = null;
+
+function renderCatalog(filter) {
+  var grid = document.getElementById('perfumeGrid');
+  var list = filter === 'todos' ? perfumes : perfumes.filter(function(p){ return p.categoria === filter; });
+  grid.innerHTML = '';
+  for (var i = 0; i < list.length; i++) {
+    var p = list[i];
+    var card = document.createElement('div');
+    card.className = 'perfume-card';
+    card.innerHTML =
+     '<div class="card-img-placeholder" style="overflow: hidden;">' +
+    '<img src="' + p.imagen + '" style="width: 100%; height: 100%; object-fit: cover;">' +
+'</div>' +
+(p.badge ? '<div class="card-badge">' + p.badge + '</div>' : '') +
+        '<div class="card-brand">' + p.marca + '</div>' +
+        '<div class="card-name">' + p.nombre + '</div>' +
+        '<div class="card-desc">' + p.desc.substring(0,90) + '...</div>' +
+        '<div class="card-tags"><span class="tag">' + p.familia + '</span><span class="tag">' + p.proyeccion + '</span></div>' +
+        '<button class="card-btn" onclick="openModal(' + p.id + ')">Ver detalles</button>' +
+      '</div>';
+    grid.appendChild(card);
+  }
+}
+
+function filterCatalog(filter, btn) {
+  var btns = document.querySelectorAll('.filter-btn');
+  for (var i = 0; i < btns.length; i++) btns[i].classList.remove('active');
+  btn.classList.add('active');
+  renderCatalog(filter);
+}
+
+function openModal(id) {
+  var p = null;
+  for (var i = 0; i < perfumes.length; i++) { if (perfumes[i].id === id) { p = perfumes[i]; break; } }
+  if (!p) return;
+  currentPerfume = p;
+  selectedSize = null;
+ document.getElementById('modalLetter').innerHTML = '<img src="' + p.imagen + '" style="width:100%; height:100%; object-fit:cover; border-radius:1.2rem 1.2rem 0 0;">';  document.getElementById('modalBrand').textContent = p.marca;
+  document.getElementById('modalName').textContent = p.nombre;
+  document.getElementById('modalDesc').textContent = p.desc;
+  document.getElementById('modalUso').textContent = p.uso;
+  document.getElementById('modalDuracion').textContent = p.duracion;
+  document.getElementById('modalProyeccion').textContent = p.proyeccion;
+  document.getElementById('modalFamilia').textContent = p.familia;
+  function pills(arr) { return arr.map(function(n){ return '<span class="note-pill">'+n+'</span>'; }).join(''); }
+  document.getElementById('modalTopNotes').innerHTML = pills(p.top);
+  document.getElementById('modalMidNotes').innerHTML = pills(p.mid);
+  document.getElementById('modalBaseNotes').innerHTML = pills(p.base);
+  var sizesHtml = '';
+  var sizeList = ['3','5','10'];
+  var sizeLabels = {'3':'Prueba','5':'Viaje','10':'Favorito'};
+  for (var j = 0; j < sizeList.length; j++) {
+    var s = sizeList[j];
+    sizesHtml += '<div class="size-btn" id="size-'+s+'" onclick="selectSize(\''+s+'\')"><div class="size-ml">'+s+'<small style="font-size:0.9rem">ml</small></div><div class="size-label">'+sizeLabels[s]+'</div><div class="size-price">'+p.precios[s]+'</div></div>';
+  }
+  document.getElementById('sizeOptions').innerHTML = sizesHtml;
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function selectSize(s) {
+  selectedSize = s;
+  var sizeList = ['3','5','10'];
+  for (var i = 0; i < sizeList.length; i++) {
+    var el = document.getElementById('size-' + sizeList[i]);
+    if (el) el.classList.remove('selected');
+  }
+  var sel = document.getElementById('size-' + s);
+  if (sel) sel.classList.add('selected');
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function closeModalOutside(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeModal();
+}
+
+function openWhatsApp() {
+  if (!currentPerfume) return;
+  var size = selectedSize || '5';
+  var precio = currentPerfume.precios[size];
+  var msg = encodeURIComponent('Hola, me interesa el perfume ' + currentPerfume.nombre + ' de ' + currentPerfume.marca + ' en presentación de ' + size + 'ml (' + precio + '). ¿Está disponible?');
+  window.open('https://wa.me/523141619220?text=' + msg, '_blank');
+}
+
+function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+
+document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeModal(); });
+renderCatalog('todos');
+</script>
+
+</body>
+</html>
