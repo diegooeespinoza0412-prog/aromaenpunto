@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -12,152 +11,178 @@
   a { color: inherit; text-decoration: none; }
   html { scroll-behavior: smooth; }
   body { font-family: 'DM Sans', sans-serif; background: #FAFAF8; color: #1C1C1A; overflow-x: hidden; }
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 5vw; height: 72px; background: rgba(250,250,248,0.96); border-bottom: 1px solid #E2E0DA; }
-.logo { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 400; letter-spacing: 0.06em; color: #1A3A16; }
-.logo span { color: #6A9E60; font-style: italic; }
-.nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
-.nav-links a { font-size: 0.82rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: #6B6B67; }
-.nav-links a:hover { color: #2D5A27; }
-.btn-nav { background: #2D5A27; color: #FAFAF8 !important; padding: 0.5rem 1.4rem; border-radius: 2rem; }
-.btn-nav:hover { background: #1A3A16 !important; }
-.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
-.hamburger span { width: 24px; height: 2px; background: #2D5A27; border-radius: 2px; display: block; }
-.hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 120px 5vw 80px; background: radial-gradient(ellipse 70% 60% at 80% 50%, rgba(184,212,176,0.25) 0%, transparent 70%), #FAFAF8; }
-.hero-content { max-width: 680px; }
-.hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #6A9E60; margin-bottom: 1.5rem; }
-.hero-tag::before { content: ''; width: 28px; height: 1px; background: #6A9E60; }
-.hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 300; line-height: 1.12; color: #1C1C1A; margin-bottom: 1.4rem; }
-.hero h1 em { font-style: italic; color: #2D5A27; }
-.hero p { font-size: 1.05rem; font-weight: 300; color: #6B6B67; line-height: 1.7; max-width: 480px; margin-bottom: 2.5rem; }
-.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
-.btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: #2D5A27; color: #FAFAF8; padding: 0.85rem 2rem; border-radius: 2rem; font-size: 0.88rem; font-weight: 500; box-shadow: 0 4px 20px rgba(45,90,39,0.3); }
-.btn-primary:hover { background: #1A3A16; }
-.btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: #2D5A27; padding: 0.85rem 2rem; border-radius: 2rem; font-size: 0.88rem; font-weight: 500; border: 1.5px solid #B8D4B0; }
-.btn-secondary:hover { border-color: #2D5A27; }
-.hero-stats { display: flex; gap: 3rem; margin-top: 4rem; padding-top: 2.5rem; border-top: 1px solid #E2E0DA; }
-.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: #2D5A27; }
-.stat-label { font-size: 0.75rem; color: #6B6B67; letter-spacing: 0.06em; text-transform: uppercase; }
-section { padding: 80px 5vw; }
-.section-tag { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #6A9E60; display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem; }
-.section-tag::before { content: ''; width: 22px; height: 1px; background: #6A9E60; }
-.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.2; color: #1C1C1A; }
-.section-title em { font-style: italic; color: #2D5A27; }
-.how { background: #F3F2EF; }
-.how-header { text-align: center; margin-bottom: 4rem; }
-.how-header .section-tag { justify-content: center; }
-.how-header .section-tag::before { display: none; }
-.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 900px; margin: 0 auto; }
-.step { text-align: center; padding: 2.5rem 2rem; background: #FAFAF8; border: 1px solid #E2E0DA; border-radius: 1rem; }
-.step-number { width: 52px; height: 52px; border-radius: 50%; background: #2D5A27; color: #FAFAF8; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; }
-.step h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 400; margin-bottom: 0.6rem; }
-.step p { font-size: 0.88rem; color: #6B6B67; line-height: 1.6; }
-.catalog-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem; }
-.filter-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-.filter-btn { padding: 0.45rem 1.1rem; border-radius: 2rem; font-size: 0.78rem; font-weight: 500; border: 1.5px solid #E2E0DA; background: transparent; color: #6B6B67; cursor: pointer; }
-.filter-btn.active, .filter-btn:hover { background: #2D5A27; color: #FAFAF8; border-color: #2D5A27; }
-.perfume-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
-.perfume-card { background: #FAFAF8; border: 1px solid #E2E0DA; border-radius: 1rem; overflow: hidden; cursor: pointer; }
-.perfume-card:hover { box-shadow: 0 12px 40px rgba(45,90,39,0.12); }
-.card-img { width: 100%; aspect-ratio: 4/3; background: linear-gradient(135deg, #F3F2EF, #B8D4B0); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
-.card-img img { width: 100%; height: 100%; object-fit: cover; }
-.card-badge { position: absolute; top: 12px; right: 12px; background: #2D5A27; color: #FAFAF8; font-size: 0.68rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.7rem; border-radius: 2rem; }
-.card-body { padding: 1.4rem; }
-.card-brand { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #6A9E60; margin-bottom: 0.3rem; }
-.card-name { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 400; margin-bottom: 0.5rem; }
-.card-desc { font-size: 0.82rem; color: #6B6B67; line-height: 1.5; margin-bottom: 1rem; }
-.card-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1.1rem; }
-.tag { font-size: 0.68rem; padding: 0.25rem 0.65rem; border-radius: 2rem; background: #F3F2EF; color: #6B6B67; border: 1px solid #E2E0DA; }
-.card-btn { width: 100%; padding: 0.7rem; border-radius: 0.5rem; font-size: 0.82rem; font-weight: 500; border: none; cursor: pointer; background: #2D5A27; color: #FAFAF8; }
-.card-btn:hover { background: #1A3A16; }
-.trust { background: #1A3A16; }
-.trust .section-title { color: #FAFAF8; }
-.trust .section-tag { color: #B8D4B0; }
-.trust .section-tag::before { background: #B8D4B0; }
-.trust-header { margin-bottom: 3rem; }
-.trust-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem; }
-.trust-item { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 2rem 1.5rem; text-align: center; }
-.trust-item:hover { background: rgba(255,255,255,0.12); }
-.trust-icon { width: 52px; height: 52px; border-radius: 50%; background: rgba(184,212,176,0.2); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.4rem; }
-.trust-item h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; color: #FAFAF8; margin-bottom: 0.4rem; }
-.trust-item p { font-size: 0.82rem; color: rgba(255,255,255,0.55); line-height: 1.5; }
-footer { background: #1C1C1A; color: rgba(255,255,255,0.7); padding: 4rem 5vw 2rem; }
-.footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
-.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: #FAFAF8; margin-bottom: 0.8rem; }
-.footer-logo span { color: #B8D4B0; font-style: italic; }
-.footer-desc { font-size: 0.85rem; line-height: 1.7; max-width: 280px; }
-.footer-col h5 { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #B8D4B0; margin-bottom: 1.2rem; }
-.footer-col ul { list-style: none; }
-.footer-col li { margin-bottom: 0.6rem; }
-.footer-col a { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
-.footer-col a:hover { color: #FAFAF8; }
-.footer-social { display: flex; gap: 0.75rem; margin-top: 1.5rem; }
-.social-btn { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.7); font-size: 1rem; }
-.social-btn:hover { background: #2D5A27; }
-.footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.78rem; color: rgba(255,255,255,0.35); }
-.modal-overlay { position: fixed; inset: 0; z-index: 1000; background: rgba(10,20,10,0.75); display: none; align-items: center; justify-content: center; padding: 1rem; }
-.modal-overlay.open { display: flex; }
-.modal { background: #FAFAF8; border-radius: 1.2rem; max-width: 740px; width: 100%; max-height: 90vh; overflow-y: auto; box-shadow: 0 40px 100px rgba(0,0,0,0.35); }
-.modal-header-img { width: 100%; height: 200px; background: linear-gradient(135deg, #F3F2EF, #B8D4B0); display: flex; align-items: center; justify-content: center; position: relative; border-radius: 1.2rem 1.2rem 0 0; overflow: hidden; }
-.modal-img-letter { font-family: 'Cormorant Garamond', serif; font-size: 6rem; font-weight: 300; color: #2D5A27; }
-.modal-close { position: absolute; top: 1rem; right: 1rem; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.9); border: 1px solid #E2E0DA; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; color: #6B6B67; }
-.modal-body { padding: 2rem 2.5rem 2.5rem; }
-.modal-brand { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #6A9E60; margin-bottom: 0.3rem; }
-.modal-name { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; margin-bottom: 0.8rem; }
-.modal-desc { font-size: 0.92rem; color: #6B6B67; line-height: 1.7; margin-bottom: 1.8rem; }
-.modal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.8rem; }
-.modal-info-box { background: #F3F2EF; border-radius: 0.75rem; padding: 1rem 1.2rem; }
-.modal-info-box .label { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #6B6B67; margin-bottom: 0.3rem; }
-.modal-info-box .value { font-size: 0.92rem; color: #1C1C1A; }
-.notes-section { margin-bottom: 1.8rem; }
-.notes-title { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #6B6B67; margin-bottom: 0.8rem; }
-.notes-row { display: flex; gap: 1rem; flex-wrap: wrap; }
-.note-group { flex: 1; min-width: 120px; }
-.note-group-label { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #6A9E60; margin-bottom: 0.4rem; }
-.note-pills { display: flex; flex-wrap: wrap; gap: 0.3rem; }
-.note-pill { font-size: 0.73rem; padding: 0.25rem 0.65rem; border-radius: 2rem; background: #FAFAF8; border: 1px solid #E2E0DA; color: #1C1C1A; }
-.size-section { margin-bottom: 1.8rem; }
-.size-title { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #6B6B67; margin-bottom: 0.8rem; }
-.size-options { display: flex; gap: 0.75rem; }
-.size-btn { flex: 1; padding: 0.9rem; border-radius: 0.75rem; border: 2px solid #E2E0DA; background: #FAFAF8; cursor: pointer; text-align: center; }
-.size-btn:hover { border-color: #6A9E60; }
-.size-btn.selected { border-color: #2D5A27; background: rgba(45,90,39,0.06); }
-.size-ml { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 300; color: #1C1C1A; }
-.size-label { font-size: 0.7rem; color: #6B6B67; margin-top: 0.15rem; }
-.size-price { font-size: 0.85rem; font-weight: 500; color: #2D5A27; margin-top: 0.2rem; }
-.modal-actions { display: flex; gap: 1rem; }
-.btn-whatsapp { flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.6rem; background: #25D366; color: #FAFAF8; padding: 1rem; border-radius: 0.75rem; font-size: 0.92rem; font-weight: 500; border: none; cursor: pointer; box-shadow: 0 4px 20px rgba(37,211,102,0.35); }
-.btn-whatsapp:hover { background: #1eb859; }
-.float-wa { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 90; width: 56px; height: 56px; border-radius: 50%; background: #25D366; color: #FAFAF8; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 6px 24px rgba(37,211,102,0.5); }
-.float-wa:hover { transform: scale(1.1); }
-@media (max-width: 768px) {
-.nav-links { display: none; }
-.nav-links.open { display: flex; flex-direction: column; gap: 0; position: fixed; top: 72px; left: 0; right: 0; background: #FAFAF8; padding: 1rem 0; border-bottom: 1px solid #E2E0DA; }
-.nav-links.open li { border-bottom: 1px solid #E2E0DA; }
-.nav-links.open a { display: block; padding: 0.9rem 5vw; }
-.hamburger { display: flex; }
-.hero-stats { gap: 1.5rem; }
-.steps { grid-template-columns: 1fr; }
-.footer-inner { grid-template-columns: 1fr; gap: 2rem; }
-.modal-body { padding: 1.5rem; }
-.modal-grid { grid-template-columns: 1fr; }
-.modal-actions { flex-direction: column; }
-.catalog-header { flex-direction: column; align-items: flex-start; }
-.size-options { flex-direction: column; }
-}
+  
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 5vw; height: 72px; background: rgba(250,250,248,0.96); border-bottom: 1px solid #E2E0DA; }
+  .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 400; letter-spacing: 0.06em; color: #1A3A16; }
+  .logo span { color: #6A9E60; font-style: italic; }
+  
+  /* --- NEW CSS FOR THE LOGO SECTION --- */
+  .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+  .nav-logo-img { height: 42px; width: auto; object-fit: contain; border-radius: 4px; }
+  /* ------------------------------------ */
+
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+  .nav-links a { font-size: 0.82rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: #6B6B67; }
+  .nav-links a:hover { color: #2D5A27; }
+  .btn-nav { background: #2D5A27; color: #FAFAF8 !important; padding: 0.5rem 1.4rem; border-radius: 2rem; }
+  .btn-nav:hover { background: #1A3A16 !important; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+  .hamburger span { width: 24px; height: 2px; background: #2D5A27; border-radius: 2px; display: block; }
+  
+  .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 120px 5vw 80px; background: radial-gradient(ellipse 70% 60% at 80% 50%, rgba(184,212,176,0.25) 0%, transparent 70%), #FAFAF8; }
+  .hero-content { max-width: 680px; }
+  .hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #6A9E60; margin-bottom: 1.5rem; }
+  .hero-tag::before { content: ''; width: 28px; height: 1px; background: #6A9E60; }
+  .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 300; line-height: 1.12; color: #1C1C1A; margin-bottom: 1.4rem; }
+  .hero h1 em { font-style: italic; color: #2D5A27; }
+  .hero p { font-size: 1.05rem; font-weight: 300; color: #6B6B67; line-height: 1.7; max-width: 480px; margin-bottom: 2.5rem; }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: #2D5A27; color: #FAFAF8; padding: 0.85rem 2rem; border-radius: 2rem; font-size: 0.88rem; font-weight: 500; box-shadow: 0 4px 20px rgba(45,90,39,0.3); }
+  .btn-primary:hover { background: #1A3A16; }
+  .btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: #2D5A27; padding: 0.85rem 2rem; border-radius: 2rem; font-size: 0.88rem; font-weight: 500; border: 1.5px solid #B8D4B0; }
+  .btn-secondary:hover { border-color: #2D5A27; }
+  .hero-stats { display: flex; gap: 3rem; margin-top: 4rem; padding-top: 2.5rem; border-top: 1px solid #E2E0DA; }
+  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: #2D5A27; }
+  .stat-label { font-size: 0.75rem; color: #6B6B67; letter-spacing: 0.06em; text-transform: uppercase; }
+  
+  section { padding: 80px 5vw; }
+  .section-tag { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #6A9E60; display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem; }
+  .section-tag::before { content: ''; width: 22px; height: 1px; background: #6A9E60; }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.2; color: #1C1C1A; }
+  .section-title em { font-style: italic; color: #2D5A27; }
+  
+  .how { background: #F3F2EF; }
+  .how-header { text-align: center; margin-bottom: 4rem; }
+  .how-header .section-tag { justify-content: center; }
+  .how-header .section-tag::before { display: none; }
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 900px; margin: 0 auto; }
+  .step { text-align: center; padding: 2.5rem 2rem; background: #FAFAF8; border: 1px solid #E2E0DA; border-radius: 1rem; }
+  .step-number { width: 52px; height: 52px; border-radius: 50%; background: #2D5A27; color: #FAFAF8; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; }
+  .step h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 400; margin-bottom: 0.6rem; }
+  .step p { font-size: 0.88rem; color: #6B6B67; line-height: 1.6; }
+  
+  .catalog-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem; }
+  .filter-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .filter-btn { padding: 0.45rem 1.1rem; border-radius: 2rem; font-size: 0.78rem; font-weight: 500; border: 1.5px solid #E2E0DA; background: transparent; color: #6B6B67; cursor: pointer; }
+  .filter-btn.active, .filter-btn:hover { background: #2D5A27; color: #FAFAF8; border-color: #2D5A27; }
+  .perfume-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
+  .perfume-card { background: #FAFAF8; border: 1px solid #E2E0DA; border-radius: 1rem; overflow: hidden; cursor: pointer; }
+  .perfume-card:hover { box-shadow: 0 12px 40px rgba(45,90,39,0.12); }
+  .card-img { width: 100%; aspect-ratio: 4/3; background: linear-gradient(135deg, #F3F2EF, #B8D4B0); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+  .card-img img { width: 100%; height: 100%; object-fit: cover; }
+  .card-badge { position: absolute; top: 12px; right: 12px; background: #2D5A27; color: #FAFAF8; font-size: 0.68rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.7rem; border-radius: 2rem; }
+  .card-body { padding: 1.4rem; }
+  .card-brand { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #6A9E60; margin-bottom: 0.3rem; }
+  .card-name { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 400; margin-bottom: 0.5rem; }
+  .card-desc { font-size: 0.82rem; color: #6B6B67; line-height: 1.5; margin-bottom: 1rem; }
+  .card-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1.1rem; }
+  .tag { font-size: 0.68rem; padding: 0.25rem 0.65rem; border-radius: 2rem; background: #F3F2EF; color: #6B6B67; border: 1px solid #E2E0DA; }
+  .card-btn { width: 100%; padding: 0.7rem; border-radius: 0.5rem; font-size: 0.82rem; font-weight: 500; border: none; cursor: pointer; background: #2D5A27; color: #FAFAF8; }
+  .card-btn:hover { background: #1A3A16; }
+  
+  .trust { background: #1A3A16; }
+  .trust .section-title { color: #FAFAF8; }
+  .trust .section-tag { color: #B8D4B0; }
+  .trust .section-tag::before { background: #B8D4B0; }
+  .trust-header { margin-bottom: 3rem; }
+  .trust-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem; }
+  .trust-item { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 2rem 1.5rem; text-align: center; }
+  .trust-item:hover { background: rgba(255,255,255,0.12); }
+  .trust-icon { width: 52px; height: 52px; border-radius: 50%; background: rgba(184,212,176,0.2); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.4rem; }
+  .trust-item h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; color: #FAFAF8; margin-bottom: 0.4rem; }
+  .trust-item p { font-size: 0.82rem; color: rgba(255,255,255,0.55); line-height: 1.5; }
+  
+  footer { background: #1C1C1A; color: rgba(255,255,255,0.7); padding: 4rem 5vw 2rem; }
+  .footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: #FAFAF8; margin-bottom: 0.8rem; }
+  .footer-logo span { color: #B8D4B0; font-style: italic; }
+  .footer-desc { font-size: 0.85rem; line-height: 1.7; max-width: 280px; }
+  .footer-col h5 { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #B8D4B0; margin-bottom: 1.2rem; }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.6rem; }
+  .footer-col a { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+  .footer-col a:hover { color: #FAFAF8; }
+  .footer-social { display: flex; gap: 0.75rem; margin-top: 1.5rem; }
+  .social-btn { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.7); font-size: 1rem; }
+  .social-btn:hover { background: #2D5A27; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+  
+  .modal-overlay { position: fixed; inset: 0; z-index: 1000; background: rgba(10,20,10,0.75); display: none; align-items: center; justify-content: center; padding: 1rem; }
+  .modal-overlay.open { display: flex; }
+  .modal { background: #FAFAF8; border-radius: 1.2rem; max-width: 740px; width: 100%; max-height: 90vh; overflow-y: auto; box-shadow: 0 40px 100px rgba(0,0,0,0.35); }
+  .modal-header-img { width: 100%; height: 200px; background: linear-gradient(135deg, #F3F2EF, #B8D4B0); display: flex; align-items: center; justify-content: center; position: relative; border-radius: 1.2rem 1.2rem 0 0; overflow: hidden; }
+  .modal-img-letter { font-family: 'Cormorant Garamond', serif; font-size: 6rem; font-weight: 300; color: #2D5A27; }
+  .modal-close { position: absolute; top: 1rem; right: 1rem; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.9); border: 1px solid #E2E0DA; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; color: #6B6B67; }
+  .modal-body { padding: 2rem 2.5rem 2.5rem; }
+  .modal-brand { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #6A9E60; margin-bottom: 0.3rem; }
+  .modal-name { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; margin-bottom: 0.8rem; }
+  .modal-desc { font-size: 0.92rem; color: #6B6B67; line-height: 1.7; margin-bottom: 1.8rem; }
+  .modal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.8rem; }
+  .modal-info-box { background: #F3F2EF; border-radius: 0.75rem; padding: 1rem 1.2rem; }
+  .modal-info-box .label { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #6B6B67; margin-bottom: 0.3rem; }
+  .modal-info-box .value { font-size: 0.92rem; color: #1C1C1A; }
+  .notes-section { margin-bottom: 1.8rem; }
+  .notes-title { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #6B6B67; margin-bottom: 0.8rem; }
+  .notes-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .note-group { flex: 1; min-width: 120px; }
+  .note-group-label { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #6A9E60; margin-bottom: 0.4rem; }
+  .note-pills { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+  .note-pill { font-size: 0.73rem; padding: 0.25rem 0.65rem; border-radius: 2rem; background: #FAFAF8; border: 1px solid #E2E0DA; color: #1C1C1A; }
+  .size-section { margin-bottom: 1.8rem; }
+  .size-title { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #6B6B67; margin-bottom: 0.8rem; }
+  .size-options { display: flex; gap: 0.75rem; }
+  .size-btn { flex: 1; padding: 0.9rem; border-radius: 0.75rem; border: 2px solid #E2E0DA; background: #FAFAF8; cursor: pointer; text-align: center; }
+  .size-btn:hover { border-color: #6A9E60; }
+  .size-btn.selected { border-color: #2D5A27; background: rgba(45,90,39,0.06); }
+  .size-ml { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 300; color: #1C1C1A; }
+  .size-label { font-size: 0.7rem; color: #6B6B67; margin-top: 0.15rem; }
+  .size-price { font-size: 0.85rem; font-weight: 500; color: #2D5A27; margin-top: 0.2rem; }
+  .modal-actions { display: flex; gap: 1rem; }
+  .btn-whatsapp { flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.6rem; background: #25D366; color: #FAFAF8; padding: 1rem; border-radius: 0.75rem; font-size: 0.92rem; font-weight: 500; border: none; cursor: pointer; box-shadow: 0 4px 20px rgba(37,211,102,0.35); }
+  .btn-whatsapp:hover { background: #1eb859; }
+  .float-wa { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 90; width: 56px; height: 56px; border-radius: 50%; background: #25D366; color: #FAFAF8; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 6px 24px rgba(37,211,102,0.5); }
+  .float-wa:hover { transform: scale(1.1); }
+  
+  @media (max-width: 768px) {
+    /* --- NEW MEDIA QUERY CSS --- */
+    .nav-right { gap: 1rem; }
+    .nav-logo-img { height: 36px; }
+    /* --------------------------- */
+    
+    .nav-links { display: none; }
+    .nav-links.open { display: flex; flex-direction: column; gap: 0; position: fixed; top: 72px; left: 0; right: 0; background: #FAFAF8; padding: 1rem 0; border-bottom: 1px solid #E2E0DA; }
+    .nav-links.open li { border-bottom: 1px solid #E2E0DA; }
+    .nav-links.open a { display: block; padding: 0.9rem 5vw; }
+    .hamburger { display: flex; }
+    .hero-stats { gap: 1.5rem; }
+    .steps { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .modal-body { padding: 1.5rem; }
+    .modal-grid { grid-template-columns: 1fr; }
+    .modal-actions { flex-direction: column; }
+    .catalog-header { flex-direction: column; align-items: flex-start; }
+    .size-options { flex-direction: column; }
+  }
 </style>
 </head>
 <body>
 
 <nav>
   <a href="#" class="logo">Aroma en <span>Punto</span></a>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#inicio">Inicio</a></li>
-    <li><a href="#catalogo">Catálogo</a></li>
-    <li><a href="#como-funciona">Cómo funciona</a></li>
-    <li><a href="https://wa.me/523141619220" target="_blank" class="btn-nav">Contacto</a></li>
-  </ul>
-  <div class="hamburger" onclick="toggleMenu()">
-    <span></span><span></span><span></span>
+  
+  <div class="nav-right">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#catalogo">Catálogo</a></li>
+      <li><a href="#como-funciona">Cómo funciona</a></li>
+      <li><a href="https://wa.me/523141619220" target="_blank" class="btn-nav">Contacto</a></li>
+    </ul>
+    
+    <img src="images/logo.png" alt="Logo Aroma en Punto" class="nav-logo-img">
+    
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
   </div>
 </nav>
 
@@ -316,16 +341,34 @@ var perfumes = [
 
   // ── NUEVAS FRAGANCIAS ──
   { id:23, nombre:"Odyssey Mandarin Sky", marca:"Armaf", imagen:"images/mandarin_sky.png", categoria:"fresco", desc:"Luminoso y adictivo. Mandarina brillante y azafrán dan paso a un corazón cremoso de caramelo y tonka bean, terminando en una base de cedro y ambroxan con un rastro fresco y sensual.", uso:"Diario · Primavera-Verano · Todo el año", duracion:"6-8 horas", proyeccion:"Media-fuerte", familia:"Cítrico oriental", top:["Mandarina","Naranja","Azafrán","Salvia"], mid:["Caramelo","Tonka bean","Caléndula"], base:["Ambroxan","Cedro","Vetiver"], badge:null, precios:{"3":"$50 MXN","5":"$70 MXN","10":"$120 MXN"} },
-
   { id:24, nombre:"Odyssey Mega", marca:"Armaf", imagen:"images/odyssey_mega.png", categoria:"fresco", desc:"Fresco, especiado y magnéticamente versátil. El clon perfecto de YSL Y con una apertura de cítricos y jengibre sobre piña, salvia y una base amaderada de tonka y almizcle. Diario garantizado.", uso:"Diario · Oficina · Todo el año", duracion:"5-8 horas", proyeccion:"Media", familia:"Aromático amaderado", top:["Jengibre","Bergamota","Naranja","Limón","Menta"], mid:["Piña","Salvia","Enebro","Bayas","Geranio"], base:["Almizcle","Cedro","Vetiver","Tonka bean"], badge:null, precios:{"3":"$45 MXN","5":"$65 MXN","10":"$110 MXN"} },
-
   { id:25, nombre:"Odyssey Aqua", marca:"Armaf", imagen:"images/odyssey_aqua.png", categoria:"fresco", desc:"La aventura acuática definitiva. Toronja vibrante y artemisia abren paso a un corazón de lavanda y menta refrescante, cerrando con ciprés, pachulí y ambroxan en un rastro limpio y masculino.", uso:"Diario · Primavera-Verano · Oficina", duracion:"6-8 horas", proyeccion:"Media", familia:"Acuático aromático", top:["Toronja","Naranja","Artemisia"], mid:["Lavanda","Menta"], base:["Ciprés","Pachulí","Ambroxan"], badge:null, precios:{"3":"$50 MXN","5":"$75 MXN","10":"$125 MXN"} },
-
   { id:26, nombre:"Odyssey Homme White Edition", marca:"Armaf", imagen:"images/odyssey_homme_white.png", categoria:"fresco", desc:"Fresco, dulce y amaderado en perfecta armonía. Inspirado en Armani Stronger With You, abre con cítricos y pimienta rosa sobre un corazón acuático sutil, terminando en una base cálida de ámbar y amberwood irresistiblemente adictiva.", uso:"Diario · Todo el año · Oficina · Citas", duracion:"8-10 horas", proyeccion:"Media-fuerte", familia:"Oriental fougère", top:["Pimienta rosa","Toronja","Yuzu"], mid:["Hoja de violeta","Notas marinas"], base:["Ámbar","Amberwood","Madera de guayacán"], badge:null, precios:{"3":"$45 MXN","5":"$65 MXN","10":"$110 MXN"} },
-
   { id:27, nombre:"Club de Nuit Intense EDT", marca:"Armaf", imagen:"images/cdni_edt.png", categoria:"amaderado", desc:"El clon legendario de Creed Aventus. Explosión cítrica de limón, bergamota y piña negra sobre un corazón ahumado de abedul y jazmín, con una base de almizcle, patchulí y vainilla. Potencia beast mode.", uso:"Todo el año · Eventos · Citas · Diario", duracion:"8-10 horas", proyeccion:"Fuerte", familia:"Aromático amaderado", top:["Limón","Piña","Bergamota","Grosella negra","Manzana"], mid:["Abedul","Jazmín","Rosa"], base:["Almizcle","Ambergris","Pachulí","Vainilla"], badge:"Bestseller", precios:{"3":"$40 MXN","5":"$60 MXN","10":"$100 MXN"} },
 
-  { id:28, nombre:"9PM", marca:"Afnan", imagen:"images/9pm.png", categoria:"oriental", desc:"El rey de la noche a precio accesible. Inspirado en Yves Saint Laurent La Nuit de L'Homme, combina lavanda, manzana y canela en una base irresistible de vainilla, tonka bean y ámbar. Cumplidos asegurados.", uso:"Noches · Otoño-Invierno · Citas · Eventos", duracion:"8-10 horas", proyeccion:"Fuerte", familia:"Oriental vainilla", top:["Manzana","Canela","Lavanda silvestre","Bergamota"], mid:["Azahar","Lirio de los valles"], base:["Vainilla","Tonka bean","Ámbar","Pachulí"], badge:"Fan Fav", precios:{"3":"$40 MXN","5":"$60 MXN","10":"$100 MXN"} }
+  { id:28, nombre:"9PM", marca:"Afnan", imagen:"images/9pm.png", categoria:"oriental", desc:"El rey de la noche a precio accesible. Inspirado en Yves Saint Laurent La Nuit de L'Homme, combina lavanda, manzana y canela en una base irresistible de vainilla, tonka bean y ámbar. Cumplidos asegurados.", uso:"Noches · Otoño-Invierno · Citas · Eventos", duracion:"8-10 horas", proyeccion:"Fuerte", familia:"Oriental vainilla", top:["Manzana","Canela","Lavanda silvestre","Bergamota"], mid:["Azahar","Lirio de los valles"], base:["Vainilla","Tonka bean","Ámbar","Pachulí"], badge:"Fan Fav", precios:{"3":"$40 MXN","5":"$60 MXN","10":"$100 MXN"} },
+
+{ 
+  id:29,
+  nombre:"Sauvage Elixir",
+  marca:"Dior",
+  imagen:"images/dior_elixir.png",
+  categoria:"oriental",
+  desc:"La versión más intensa y poderosa de Sauvage. Una mezcla explosiva de especias cálidas, lavanda refinada y maderas profundas crean una fragancia oscura, elegante y extremadamente seductora. Rico, concentrado y diseñado para destacar con una estela inolvidable.",
+  uso:"Noches · Otoño-Invierno · Eventos · Citas",
+  duracion:"10+ horas",
+  proyeccion:"Fuerte",
+  familia:"Aromático especiado",
+  top:["Canela","Nuez moscada","Cardamomo","Toronja"],
+  mid:["Lavanda"],
+  base:["Regaliz","Ámbar","Sándalo","Pachulí","Vetiver"],
+  badge:"Best Seller",
+  precios:{
+    "3":"$235 MXN",
+    "5":"$390 MXN",
+    "10":"$700 MXN"
+  }
+}
 ];
 
 var selectedSize = null;
