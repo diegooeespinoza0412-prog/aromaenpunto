@@ -12,15 +12,7 @@
   a { color: inherit; text-decoration: none; }
   html { scroll-behavior: smooth; }
   body { font-family: 'DM Sans', sans-serif; background: #FAFAF8; color: #1C1C1A; overflow-x: hidden; }
-
-/* NAV */
-nav {
-position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-display: flex; align-items: center; justify-content: space-between;
-padding: 0 5vw; height: 72px;
-background: rgba(250,250,248,0.96);
-border-bottom: 1px solid #E2E0DA;
-}
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 5vw; height: 72px; background: rgba(250,250,248,0.96); border-bottom: 1px solid #E2E0DA; }
 .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 400; letter-spacing: 0.06em; color: #1A3A16; }
 .logo span { color: #6A9E60; font-style: italic; }
 .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
@@ -30,13 +22,7 @@ border-bottom: 1px solid #E2E0DA;
 .btn-nav:hover { background: #1A3A16 !important; }
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
 .hamburger span { width: 24px; height: 2px; background: #2D5A27; border-radius: 2px; display: block; }
-
-/* HERO */
-.hero {
-min-height: 100vh; display: flex; align-items: center; justify-content: center;
-padding: 120px 5vw 80px;
-background: radial-gradient(ellipse 70% 60% at 80% 50%, rgba(184,212,176,0.25) 0%, transparent 70%), #FAFAF8;
-}
+.hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 120px 5vw 80px; background: radial-gradient(ellipse 70% 60% at 80% 50%, rgba(184,212,176,0.25) 0%, transparent 70%), #FAFAF8; }
 .hero-content { max-width: 680px; }
 .hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #6A9E60; margin-bottom: 1.5rem; }
 .hero-tag::before { content: ''; width: 28px; height: 1px; background: #6A9E60; }
@@ -51,15 +37,11 @@ background: radial-gradient(ellipse 70% 60% at 80% 50%, rgba(184,212,176,0.25) 0
 .hero-stats { display: flex; gap: 3rem; margin-top: 4rem; padding-top: 2.5rem; border-top: 1px solid #E2E0DA; }
 .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: #2D5A27; }
 .stat-label { font-size: 0.75rem; color: #6B6B67; letter-spacing: 0.06em; text-transform: uppercase; }
-
-/* SECTIONS */
 section { padding: 80px 5vw; }
 .section-tag { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #6A9E60; display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem; }
 .section-tag::before { content: ''; width: 22px; height: 1px; background: #6A9E60; }
 .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.2; color: #1C1C1A; }
 .section-title em { font-style: italic; color: #2D5A27; }
-
-/* HOW IT WORKS */
 .how { background: #F3F2EF; }
 .how-header { text-align: center; margin-bottom: 4rem; }
 .how-header .section-tag { justify-content: center; }
@@ -69,8 +51,6 @@ section { padding: 80px 5vw; }
 .step-number { width: 52px; height: 52px; border-radius: 50%; background: #2D5A27; color: #FAFAF8; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; }
 .step h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 400; margin-bottom: 0.6rem; }
 .step p { font-size: 0.88rem; color: #6B6B67; line-height: 1.6; }
-
-/* CATALOG */
 .catalog-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem; }
 .filter-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; }
 .filter-btn { padding: 0.45rem 1.1rem; border-radius: 2rem; font-size: 0.78rem; font-weight: 500; border: 1.5px solid #E2E0DA; background: transparent; color: #6B6B67; cursor: pointer; }
@@ -78,8 +58,8 @@ section { padding: 80px 5vw; }
 .perfume-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
 .perfume-card { background: #FAFAF8; border: 1px solid #E2E0DA; border-radius: 1rem; overflow: hidden; cursor: pointer; }
 .perfume-card:hover { box-shadow: 0 12px 40px rgba(45,90,39,0.12); }
-.card-img { width: 100%; aspect-ratio: 4/3; background: linear-gradient(135deg, #F3F2EF, #B8D4B0); display: flex; align-items: center; justify-content: center; position: relative; }
-.card-img-placeholder { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; color: #2D5A27; opacity: 1; }
+.card-img { width: 100%; aspect-ratio: 4/3; background: linear-gradient(135deg, #F3F2EF, #B8D4B0); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.card-img img { width: 100%; height: 100%; object-fit: cover; }
 .card-badge { position: absolute; top: 12px; right: 12px; background: #2D5A27; color: #FAFAF8; font-size: 0.68rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.7rem; border-radius: 2rem; }
 .card-body { padding: 1.4rem; }
 .card-brand { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #6A9E60; margin-bottom: 0.3rem; }
@@ -89,8 +69,6 @@ section { padding: 80px 5vw; }
 .tag { font-size: 0.68rem; padding: 0.25rem 0.65rem; border-radius: 2rem; background: #F3F2EF; color: #6B6B67; border: 1px solid #E2E0DA; }
 .card-btn { width: 100%; padding: 0.7rem; border-radius: 0.5rem; font-size: 0.82rem; font-weight: 500; border: none; cursor: pointer; background: #2D5A27; color: #FAFAF8; }
 .card-btn:hover { background: #1A3A16; }
-
-/* TRUST */
 .trust { background: #1A3A16; }
 .trust .section-title { color: #FAFAF8; }
 .trust .section-tag { color: #B8D4B0; }
@@ -102,8 +80,6 @@ section { padding: 80px 5vw; }
 .trust-icon { width: 52px; height: 52px; border-radius: 50%; background: rgba(184,212,176,0.2); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.4rem; }
 .trust-item h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; color: #FAFAF8; margin-bottom: 0.4rem; }
 .trust-item p { font-size: 0.82rem; color: rgba(255,255,255,0.55); line-height: 1.5; }
-
-/* FOOTER */
 footer { background: #1C1C1A; color: rgba(255,255,255,0.7); padding: 4rem 5vw 2rem; }
 .footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
 .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: #FAFAF8; margin-bottom: 0.8rem; }
@@ -118,13 +94,11 @@ footer { background: #1C1C1A; color: rgba(255,255,255,0.7); padding: 4rem 5vw 2r
 .social-btn { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.7); font-size: 1rem; }
 .social-btn:hover { background: #2D5A27; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.78rem; color: rgba(255,255,255,0.35); }
-
-/* MODAL */
 .modal-overlay { position: fixed; inset: 0; z-index: 1000; background: rgba(10,20,10,0.75); display: none; align-items: center; justify-content: center; padding: 1rem; }
 .modal-overlay.open { display: flex; }
 .modal { background: #FAFAF8; border-radius: 1.2rem; max-width: 740px; width: 100%; max-height: 90vh; overflow-y: auto; box-shadow: 0 40px 100px rgba(0,0,0,0.35); }
 .modal-header-img { width: 100%; height: 200px; background: linear-gradient(135deg, #F3F2EF, #B8D4B0); display: flex; align-items: center; justify-content: center; position: relative; border-radius: 1.2rem 1.2rem 0 0; overflow: hidden; }
-.modal-img-letter { font-family: 'Cormorant Garamond', serif; font-size: 6rem; font-weight: 300; color: #2D5A27; opacity: 1; }
+.modal-img-letter { font-family: 'Cormorant Garamond', serif; font-size: 6rem; font-weight: 300; color: #2D5A27; }
 .modal-close { position: absolute; top: 1rem; right: 1rem; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.9); border: 1px solid #E2E0DA; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; color: #6B6B67; }
 .modal-body { padding: 2rem 2.5rem 2.5rem; }
 .modal-brand { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #6A9E60; margin-bottom: 0.3rem; }
@@ -153,12 +127,8 @@ footer { background: #1C1C1A; color: rgba(255,255,255,0.7); padding: 4rem 5vw 2r
 .modal-actions { display: flex; gap: 1rem; }
 .btn-whatsapp { flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.6rem; background: #25D366; color: #FAFAF8; padding: 1rem; border-radius: 0.75rem; font-size: 0.92rem; font-weight: 500; border: none; cursor: pointer; box-shadow: 0 4px 20px rgba(37,211,102,0.35); }
 .btn-whatsapp:hover { background: #1eb859; }
-
-/* FLOATING WA */
 .float-wa { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 90; width: 56px; height: 56px; border-radius: 50%; background: #25D366; color: #FAFAF8; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 6px 24px rgba(37,211,102,0.5); }
 .float-wa:hover { transform: scale(1.1); }
-
-/* RESPONSIVE */
 @media (max-width: 768px) {
 .nav-links { display: none; }
 .nav-links.open { display: flex; flex-direction: column; gap: 0; position: fixed; top: 72px; left: 0; right: 0; background: #FAFAF8; padding: 1rem 0; border-bottom: 1px solid #E2E0DA; }
@@ -175,7 +145,6 @@ footer { background: #1C1C1A; color: rgba(255,255,255,0.7); padding: 4rem 5vw 2r
 .size-options { flex-direction: column; }
 }
 </style>
-
 </head>
 <body>
 
@@ -202,7 +171,7 @@ footer { background: #1C1C1A; color: rgba(255,255,255,0.7); padding: 4rem 5vw 2r
       <a href="#como-funciona" class="btn-secondary">Cómo funciona</a>
     </div>
     <div class="hero-stats">
-      <div><div class="stat-num">22+</div><div class="stat-label">Fragancias</div></div>
+      <div><div class="stat-num">28+</div><div class="stat-label">Fragancias</div></div>
       <div><div class="stat-num">3</div><div class="stat-label">Tamaños</div></div>
       <div><div class="stat-num">100%</div><div class="stat-label">Originales</div></div>
     </div>
@@ -215,21 +184,9 @@ footer { background: #1C1C1A; color: rgba(255,255,255,0.7); padding: 4rem 5vw 2r
     <h2 class="section-title">Tan fácil como <em>tres pasos</em></h2>
   </div>
   <div class="steps">
-    <div class="step">
-      <div class="step-number">1</div>
-      <h3>Elige tu perfume</h3>
-      <p>Explora nuestro catálogo con descripciones detalladas de notas, proyección y tipo de uso.</p>
-    </div>
-    <div class="step">
-      <div class="step-number">2</div>
-      <h3>Selecciona el tamaño</h3>
-      <p>Disponible en 3ml, 5ml y 10ml. Prueba primero o llévate tu favorito en tamaño de viaje.</p>
-    </div>
-    <div class="step">
-      <div class="step-number">3</div>
-      <h3>Ordena por WhatsApp</h3>
-      <p>Te enviamos un mensaje prellenado. Confirma, paga fácilmente y recibe en tu puerta.</p>
-    </div>
+    <div class="step"><div class="step-number">1</div><h3>Elige tu perfume</h3><p>Explora nuestro catálogo con descripciones detalladas de notas, proyección y tipo de uso.</p></div>
+    <div class="step"><div class="step-number">2</div><h3>Selecciona el tamaño</h3><p>Disponible en 3ml, 5ml y 10ml. Prueba primero o llévate tu favorito en tamaño de viaje.</p></div>
+    <div class="step"><div class="step-number">3</div><h3>Ordena por WhatsApp</h3><p>Te enviamos un mensaje prellenado. Confirma, paga fácilmente y recibe en tu puerta.</p></div>
   </div>
 </section>
 
@@ -270,7 +227,7 @@ footer { background: #1C1C1A; color: rgba(255,255,255,0.7); padding: 4rem 5vw 2r
       <p class="footer-desc">Fragancias originales en decants accesibles. Lujo a tu medida, directo a tu puerta.</p>
       <div class="footer-social">
         <a href="https://wa.me/523141619220" target="_blank" class="social-btn">📱</a>
-        <a href="#" class="social-btn">📸</a>
+        <a href="https://www.instagram.com/aromaenpunto1?igsh=MWczY3kzeTFrYXdiNQ==" target="_blank" class="social-btn">📸</a>
       </div>
     </div>
     <div class="footer-col">
@@ -285,7 +242,7 @@ footer { background: #1C1C1A; color: rgba(255,255,255,0.7); padding: 4rem 5vw 2r
       <h5>Contacto</h5>
       <ul>
         <li><a href="https://wa.me/523141619220" target="_blank">+52 314 161 9220</a></li>
-        <li><a href="#">Instagram</a></li>
+        <li><a href="https://www.instagram.com/aromaenpunto1?igsh=MWczY3kzeTFrYXdiNQ==" target="_blank">Instagram</a></li>
       </ul>
     </div>
   </div>
@@ -334,49 +291,41 @@ footer { background: #1C1C1A; color: rgba(255,255,255,0.7); padding: 4rem 5vw 2r
 
 <script>
 var perfumes = [
-  { id:1, nombre:"L'Immensité", marca:"Louis Vuitton",imagen:"images/limmensite.png",categoria:"fresco", desc:"Fragancia masculina icónica que evoca la libertad de horizontes infinitos. Cítricos brillantes y jengibre chispeante sobre una base amaderada cálida y sensual.", uso:"Diario · Oficina · Primavera-Verano", duracion:"6-8 horas", proyeccion:"Media-fuerte", familia:"Cítrico aromático", top:["Toronja","Bergamota","Jengibre"], mid:["Romero","Salvia","Notas acuáticas","Geranio"], base:["Ambroxan","Ámbar","Labdanum"], badge:"Premium", precios:{"3":"$255 MXN","5":"$470 MXN","10":"$900 MXN"} },
+  { id:1, nombre:"L'Immensité", marca:"Louis Vuitton", imagen:"images/limmensite.png", categoria:"fresco", desc:"Fragancia masculina icónica que evoca la libertad de horizontes infinitos. Cítricos brillantes y jengibre chispeante sobre una base amaderada cálida y sensual.", uso:"Diario · Oficina · Primavera-Verano", duracion:"6-8 horas", proyeccion:"Media-fuerte", familia:"Cítrico aromático", top:["Toronja","Bergamota","Jengibre"], mid:["Romero","Salvia","Notas acuáticas","Geranio"], base:["Ambroxan","Ámbar","Labdanum"], badge:"Premium", precios:{"3":"$255 MXN","5":"$470 MXN","10":"$900 MXN"} },
+  { id:2, nombre:"Santal 33", marca:"Le Labo", imagen:"images/santal.png", categoria:"amaderado", desc:"El perfume de culto de la última década. Sándalo australiano, cuero y cardamomo crean una fragancia hipnótica y adictiva, perfecta en hombres y mujeres.", uso:"Diario · Firma personal · Todo el año", duracion:"6-8 horas", proyeccion:"Suave-media", familia:"Amaderado aromático", top:["Cardamomo","Violeta","Iris"], mid:["Sándalo australiano","Madera de cedro"], base:["Cuero","Ámbar","Almizcle"], badge:"Cult", precios:{"3":"$205 MXN","5":"$370 MXN","10":"$700 MXN"} },
+  { id:3, nombre:"Erba Pura", marca:"Xerjoff", imagen:"images/erba.png", categoria:"fresco", desc:"Explosión de frutas mediterráneas y cítricos sicilianos sobre una base cremosa de vainilla y almizcle. Fresco, alegre y adictivo: la esencia del verano italiano.", uso:"Diario · Verano · Primavera", duracion:"6-9 horas", proyeccion:"Fuerte", familia:"Frutal oriental", top:["Naranja de Sicilia","Limón","Bergamota de Calabria"], mid:["Frutas mediterráneas"], base:["Almizcle blanco","Vainilla de Madagascar","Ámbar"], badge:null, precios:{"3":"$180 MXN","5":"$320 MXN","10":"$600 MXN"} },
+  { id:4, nombre:"Millésime Impérial", marca:"Creed", imagen:"images/creed.png", categoria:"fresco", desc:"La fragancia de los reyes. Cítricos brillantes sobre un acorde marino salado y una base amaderada cálida. Refinamiento atemporal, de la oficina a una noche especial.", uso:"Diario · Oficina · Eventos", duracion:"5-8 horas", proyeccion:"Suave-media", familia:"Cítrico marino", top:["Notas frutales","Sal marina","Bergamota"], mid:["Limón de Sicilia","Iris","Mandarina"], base:["Notas marinas","Almizcle","Cedro"], badge:"Exclusivo", precios:{"3":"$230 MXN","5":"$420 MXN","10":"$800 MXN"} },
+  { id:5, nombre:"Le Beau Le Parfum", marca:"Jean Paul Gaultier", imagen:"images/jpg_lebeau.png", categoria:"oriental", desc:"Tropical, adictivo e irresistible. Jengibre chispeante y piña jugosa encienden los sentidos, mientras la cremosa madera de coco profundiza el encanto. Anclado en ambergris sensual, sándalo y tonka bean, una fragancia diseñada para cautivar.", uso:"Verano · Primavera · Citas · Diario", duracion:"6-8 horas", proyeccion:"Media-fuerte", familia:"Ámbar amaderado", top:["Piña","Iris","Ciprés","Jengibre"], mid:["Madera de coco","Notas amaderadas"], base:["Tonka bean","Sándalo","Ámbar","Ambergris"], badge:null, precios:{"3":"$105 MXN","5":"$175 MXN","10":"$310 MXN"} },
+  { id:6, nombre:"Le Male Elixir", marca:"Jean Paul Gaultier", imagen:"images/jpg_elixir.png", categoria:"oriental", desc:"El marinero más seductor. Lavanda fresca y menta explosiva se transforman en una base de tonka, benjuí y miel increíblemente adictiva. Beast mode en la piel.", uso:"Noches · Otoño-Invierno · Citas", duracion:"10+ horas", proyeccion:"Fuerte", familia:"Ámbar aromático", top:["Menta","Lavanda"], mid:["Tonka bean","Benjuí"], base:["Miel","Tabaco","Vainilla"], badge:"Bestseller", precios:{"3":"$105 MXN","5":"$175 MXN","10":"$310 MXN"} },
+  { id:7, nombre:"Le Male Le Parfum", marca:"Jean Paul Gaultier", imagen:"images/jpg_leparfum.png", categoria:"oriental", desc:"El marinero convertido en capitán. Cardamomo especiado y poderoso da paso a un corazón de lavanda negra e iris misterioso, terminando en una base cálida y adictiva de vainilla y ámbar. Elegante, oscuro y sumamente seductor.", uso:"Noches · Otoño-Invierno · Citas · Eventos", duracion:"8-10 horas", proyeccion:"Media-fuerte", familia:"Oriental especiado", top:["Cardamomo"], mid:["Lavanda","Iris"], base:["Vainilla","Notas amaderadas","Ámbar"], badge:null, precios:{"3":"$105 MXN","5":"$175 MXN","10":"$310 MXN"} },
+  { id:8, nombre:"The Most Wanted EDP", marca:"Azzaro", imagen:"images/azzaro.png", categoria:"oriental", desc:"Dulce, especiado y magnéticamente seductor. Cardamomo y toffee se mezclan con una base amaderada irresistible. Fragancia de cumplidos garantizados.", uso:"Noches · Otoño-Invierno · Citas", duracion:"7-9 horas", proyeccion:"Media-fuerte", familia:"Oriental especiado", top:["Cardamomo"], mid:["Toffee"], base:["Ámbar","Madera"], badge:null, precios:{"3":"$80 MXN","5":"$125 MXN","10":"$210 MXN"} },
+  { id:9, nombre:"Acqua di Giò Profondo EDP", marca:"Giorgio Armani", imagen:"images/adg.png", categoria:"fresco", desc:"El Mediterráneo en su versión más profunda. Notas marinas y cítricas brillantes sobre lavanda, ciprés y una base amaderada con almizcle. Moderno y versátil.", uso:"Diario · Primavera-Verano · Oficina", duracion:"6-8 horas", proyeccion:"Media", familia:"Acuático aromático", top:["Notas marinas","Mandarina","Bergamota"], mid:["Lavanda","Ciprés","Romero"], base:["Pachulí","Almizcle","Incienso","Ámbar"], badge:null, precios:{"3":"$100 MXN","5":"$160 MXN","10":"$280 MXN"} },
+  { id:10, nombre:"Born in Roma Intense", marca:"Valentino", imagen:"images/valentino.png", categoria:"oriental", desc:"La masculinidad romana en su versión más intensa. Lavanda y vainilla bourbon se fusionan en una fragancia elegante, cálida y profundamente seductora.", uso:"Noches · Otoño-Invierno · Eventos", duracion:"8-10 horas", proyeccion:"Media-fuerte", familia:"Oriental vainilla", top:["Lavanda","Pimienta negra"], mid:["Iris","Geranio"], base:["Vainilla bourbon","Ámbar","Almizcle"], badge:null, precios:{"3":"$140 MXN","5":"$235 MXN","10":"$430 MXN"} },
+  { id:11, nombre:"Bleu de Chanel Parfum", marca:"Chanel", imagen:"images/bdc.png", categoria:"amaderado", desc:"El epítome de la elegancia masculina. Cítricos limpios y una base de cedro, sándalo e incienso crean la fragancia más icónica y versátil de los últimos años.", uso:"Todo el año · Oficina · Eventos · Citas", duracion:"8-10 horas", proyeccion:"Media", familia:"Aromático amaderado", top:["Bergamota","Lima","Limón","Menta"], mid:["Jengibre","Nuez moscada","Jazmín"], base:["Incienso","Cedro","Sándalo","Ámbar"], badge:"Clásico", precios:{"3":"$145 MXN","5":"$250 MXN","10":"$460 MXN"} },
+  { id:12, nombre:"Allure Homme Sport", marca:"Chanel", imagen:"images/allure.png", categoria:"fresco", desc:"El hombre activo y sofisticado. Cítricos vibrantes y notas frescas con base amaderada suave y especiada. Elegante, sin esfuerzo, para cualquier ocasión.", uso:"Diario · Verano · Primavera · Oficina", duracion:"5-7 horas", proyeccion:"Suave-media", familia:"Cítrico aromático", top:["Naranja","Limón","Mandarina"], mid:["Neroli","Almizcle"], base:["Vainilla","Cedro","Sándalo"], badge:null, precios:{"3":"$140 MXN","5":"$235 MXN","10":"$430 MXN"} },
+  { id:13, nombre:"Bad Boy Cobalt", marca:"Carolina Herrera", imagen:"images/colbalt.png", categoria:"fresco", desc:"Audaz y moderno. Una apertura dulce afrutada con un corazón fresco y especiado que se convierte en una base amaderada oscura e irresistible.", uso:"Diario · Citas · Eventos · Verano", duracion:"7-9 horas", proyeccion:"Media-fuerte", familia:"Aromático amaderado", top:["Lavanda","Ciruela"], mid:["Cedro","Vetiver"], base:["Madera","Almizcle"], badge:null, precios:{"3":"$110 MXN","5":"$175 MXN","10":"$310 MXN"} },
+  { id:14, nombre:"Invictus Victory Elixir", marca:"Paco Rabanne", imagen:"images/invictus.png", categoria:"oriental", desc:"La victoria en su forma más intensa. Coco cremoso, vainilla y especias sobre una base profunda y envolvente. El ganador absoluto de los cumplidos nocturnos.", uso:"Noches · Otoño-Invierno · Eventos", duracion:"8-10 horas", proyeccion:"Fuerte", familia:"Oriental amaderado", top:["Coco","Especias"], mid:["Vainilla","Sándalo"], base:["Ámbar","Almizcle","Pachulí"], badge:"Exclusivo", precios:{"3":"$115 MXN","5":"$190 MXN","10":"$340 MXN"} },
+  { id:15, nombre:"Sauvage EDT", marca:"Dior", imagen:"images/sauvage.png", categoria:"fresco", desc:"El salvaje más elegante del mundo. Bergamota calabresa y pimienta Sichuan sobre una base de ambroxan y cedro. La fragancia masculina más vendida del planeta.", uso:"Todo el año · Diario · Oficina · Citas", duracion:"6-9 horas", proyeccion:"Fuerte", familia:"Aromático fresco", top:["Bergamota de Calabria","Pimienta Sichuan"], mid:["Lavanda","Vetiver","Geranio"], base:["Ambroxan","Cedro","Labdanum"], badge:"Más vendido", precios:{"3":"$115 MXN","5":"$190 MXN","10":"$340 MXN"} },
+  { id:16, nombre:"Explorer Platinum", marca:"Montblanc", imagen:"images/montblanc.png", categoria:"fresco", desc:"La aventura a gran altitud. Hojas de violeta, salvia y cedro de Alaska crean una fragancia fresca, sofisticada y limpia para el hombre moderno.", uso:"Diario · Oficina · Primavera", duracion:"6-8 horas", proyeccion:"Media", familia:"Aromático amaderado", top:["Hojas de violeta","Toronja"], mid:["Salvia","Ciprés","Musgo"], base:["Cedro de Alaska","Ámbar","Almizcle"], badge:null, precios:{"3":"$80 MXN","5":"$115 MXN","10":"$190 MXN"} },
+  { id:17, nombre:"Dior Homme Cologne", marca:"Dior", imagen:"images/homme.png", categoria:"fresco", desc:"El dandy francés en su versión más ligera y luminosa. Toronja fresca y bergamota con un corazón floral de iris sutil. Elegancia pura y sin esfuerzo.", uso:"Diario · Primavera-Verano · Oficina", duracion:"4-6 horas", proyeccion:"Suave", familia:"Cítrico floral", top:["Toronja","Bergamota"], mid:["Iris","Salvia"], base:["Vetiver","Cedro","Almizcle"], badge:null, precios:{"3":"$120 MXN","5":"$195 MXN","10":"$350 MXN"} },
+  { id:18, nombre:"Y Le Parfum", marca:"Yves Saint Laurent", imagen:"images/ysl.png", categoria:"amaderado", desc:"La versión más intensa e irresistible del icónico Y. Manzana fresca y jengibre chispeante abren paso a un corazón de salvia, lavanda y geranio, terminando en una base profunda de tonka bean, cedro, olíbano y pachulí. Sofisticado y versátil para el hombre moderno.", uso:"Todo el año · Oficina · Citas · Eventos", duracion:"7-9 horas", proyeccion:"Media-fuerte", familia:"Fougère amaderado", top:["Manzana","Toronja","Jengibre"], mid:["Salvia","Lavanda","Geranio"], base:["Tonka bean","Cedro","Olíbano","Pachulí"], badge:"Trendy", precios:{"3":"$135 MXN","5":"$225 MXN","10":"$410 MXN"} },
+  { id:19, nombre:"Full House", marca:"Game of Spades · Jo Milano", imagen:"images/fullhouse.png", categoria:"fresco", desc:"Cítricos sicilianos electrizantes con especias cálidas y una base amaderada oscura e intrigante. Proyección notable y versátil. Inspirado en Louis Vuitton Imagination.", uso:"Diario · Primavera-Verano · Todo el año", duracion:"5-7 horas", proyeccion:"Media-fuerte", familia:"Cítrico especiado", top:["Citron","Bergamota","Naranja de Sicilia"], mid:["Jengibre","Neroli","Canela"], base:["Té negro","Ambroxan","Madera de guayacán","Olíbano"], badge:null, precios:{"3":"$105 MXN","5":"$170 MXN","10":"$300 MXN"} },
+  { id:20, nombre:"Wildcard", marca:"Game of Spades · Jo Milano", imagen:"images/wildcard.png", categoria:"floral", desc:"La carta inesperada. Bergamota y coriandro frescos fluyen hacia un corazón de manzana y vainilla, terminando en una base amaderada cálida. Unisex y muy versátil.", uso:"Todo el año · Diario · Eventos", duracion:"6-8 horas", proyeccion:"Media", familia:"Floral amaderado", top:["Bergamota","Flores","Coriandro"], mid:["Manzana","Ambroxan","Vainilla"], base:["Tonka bean","Ambergris","Madera"], badge:null, precios:{"3":"$100 MXN","5":"$160 MXN","10":"$285 MXN"} },
+  { id:21, nombre:"Esmeralda", marca:"Game of Spades · Jo Milano", imagen:"images/emerald.png", categoria:"fresco", desc:"Frescura brillante y limpia. Bergamota, toronja y jengibre abren paso a un corazón floral de azahar y neroli, terminando en almizcle suave y moderno.", uso:"Diario · Primavera-Verano · Oficina", duracion:"6-7 horas", proyeccion:"Media", familia:"Cítrico floral", top:["Bergamota","Toronja","Jengibre"], mid:["Flor de naranjo","Neroli"], base:["Almizcle","Ambrette"], badge:null, precios:{"3":"$105 MXN","5":"$170 MXN","10":"$300 MXN"} },
+  { id:22, nombre:"Rouge", marca:"Game of Spades · Jo Milano", imagen:"images/rouge.png", categoria:"oriental", desc:"El dupe más querido del Baccarat Rouge 540. Dulce, cálido y sumamente envolvente. Amberwood y ambergris crean un rastro mágico e inolvidable. Para quien quiere impactar.", uso:"Noches · Eventos · Citas · Otoño-Invierno", duracion:"8-10 horas", proyeccion:"Media-fuerte", familia:"Floral amaderado", top:["Jazmín","Bergamota","Lavanda"], mid:["Amberwood","Ambergris"], base:["Notas amaderadas","Almizcle"], badge:"Fan Fav", precios:{"3":"$95 MXN","5":"$145 MXN","10":"$250 MXN"} },
 
-  { id:2, nombre:"Santal 33", marca:"Le Labo",imagen:"images/santal.png",categoria:"amaderado", desc:"El perfume de culto de la última década. Sándalo australiano, cuero y cardamomo crean una fragancia hipnótica y adictiva, perfecta en hombres y mujeres.", uso:"Diario · Firma personal · Todo el año", duracion:"6-8 horas", proyeccion:"Suave-media", familia:"Amaderado aromático", top:["Cardamomo","Violeta","Iris"], mid:["Sándalo australiano","Madera de cedro"], base:["Cuero","Ámbar","Almizcle"], badge:"Cult", precios:{"3":"$205 MXN","5":"$370 MXN","10":"$700 MXN"} },
+  // ── NUEVAS FRAGANCIAS ──
+  { id:23, nombre:"Odyssey Mandarin Sky", marca:"Armaf", imagen:"images/mandarin_sky.png", categoria:"fresco", desc:"Luminoso y adictivo. Mandarina brillante y azafrán dan paso a un corazón cremoso de caramelo y tonka bean, terminando en una base de cedro y ambroxan con un rastro fresco y sensual.", uso:"Diario · Primavera-Verano · Todo el año", duracion:"6-8 horas", proyeccion:"Media-fuerte", familia:"Cítrico oriental", top:["Mandarina","Naranja","Azafrán","Salvia"], mid:["Caramelo","Tonka bean","Caléndula"], base:["Ambroxan","Cedro","Vetiver"], badge:null, precios:{"3":"$50 MXN","5":"$70 MXN","10":"$120 MXN"} },
 
-  { id:3, nombre:"Erba Pura", marca:"Xerjoff",imagen:"images/erba.png",categoria:"fresco", desc:"Explosión de frutas mediterráneas y cítricos sicilianos sobre una base cremosa de vainilla y almizcle. Fresco, alegre y adictivo: la esencia del verano italiano.", uso:"Diario · Verano · Primavera", duracion:"6-9 horas", proyeccion:"Fuerte", familia:"Frutal oriental", top:["Naranja de Sicilia","Limón","Bergamota de Calabria"], mid:["Frutas mediterráneas"], base:["Almizcle blanco","Vainilla de Madagascar","Ámbar"], badge:null, precios:{"3":"$180 MXN","5":"$320 MXN","10":"$600 MXN"} },
+  { id:24, nombre:"Odyssey Mega", marca:"Armaf", imagen:"images/odyssey_mega.png", categoria:"fresco", desc:"Fresco, especiado y magnéticamente versátil. El clon perfecto de YSL Y con una apertura de cítricos y jengibre sobre piña, salvia y una base amaderada de tonka y almizcle. Diario garantizado.", uso:"Diario · Oficina · Todo el año", duracion:"5-8 horas", proyeccion:"Media", familia:"Aromático amaderado", top:["Jengibre","Bergamota","Naranja","Limón","Menta"], mid:["Piña","Salvia","Enebro","Bayas","Geranio"], base:["Almizcle","Cedro","Vetiver","Tonka bean"], badge:null, precios:{"3":"$45 MXN","5":"$65 MXN","10":"$110 MXN"} },
 
-  { id:4, nombre:"Millésime Impérial", marca:"Creed",imagen:"images/creed.png",categoria:"fresco", desc:"La fragancia de los reyes. Cítricos brillantes sobre un acorde marino salado y una base amaderada cálida. Refinamiento atemporal, de la oficina a una noche especial.", uso:"Diario · Oficina · Eventos", duracion:"5-8 horas", proyeccion:"Suave-media", familia:"Cítrico marino", top:["Notas frutales","Sal marina","Bergamota"], mid:["Limón de Sicilia","Iris","Mandarina"], base:["Notas marinas","Almizcle","Cedro"], badge:"Exclusivo", precios:{"3":"$230 MXN","5":"$420 MXN","10":"$800 MXN"} },
+  { id:25, nombre:"Odyssey Aqua", marca:"Armaf", imagen:"images/odyssey_aqua.png", categoria:"fresco", desc:"La aventura acuática definitiva. Toronja vibrante y artemisia abren paso a un corazón de lavanda y menta refrescante, cerrando con ciprés, pachulí y ambroxan en un rastro limpio y masculino.", uso:"Diario · Primavera-Verano · Oficina", duracion:"6-8 horas", proyeccion:"Media", familia:"Acuático aromático", top:["Toronja","Naranja","Artemisia"], mid:["Lavanda","Menta"], base:["Ciprés","Pachulí","Ambroxan"], badge:null, precios:{"3":"$50 MXN","5":"$75 MXN","10":"$125 MXN"} },
 
-  { id:5, nombre:"Le Beau le parfum", marca:"Jean Paul Gaultier",imagen:"images/jpg_lebeau.png",categoria:"fresco", desc:"El hombre seductor en verano. Bergamota chispeante y madera de coco tropical crean una fragancia fresca, dulce y magnéticamente atractiva.", uso:"Verano · Diario · Citas", duracion:"5-7 horas", proyeccion:"Media", familia:"Aromático amaderado", top:["Bergamota"], mid:["Madera de coco"], base:["Tonka bean","Cedro"], badge:null, precios:{"3":"$105 MXN","5":"$175 MXN","10":"$310 MXN"} },
+  { id:26, nombre:"Odyssey Homme White Edition", marca:"Armaf", imagen:"images/odyssey_homme_white.png", categoria:"fresco", desc:"Fresco, dulce y amaderado en perfecta armonía. Inspirado en Armani Stronger With You, abre con cítricos y pimienta rosa sobre un corazón acuático sutil, terminando en una base cálida de ámbar y amberwood irresistiblemente adictiva.", uso:"Diario · Todo el año · Oficina · Citas", duracion:"8-10 horas", proyeccion:"Media-fuerte", familia:"Oriental fougère", top:["Pimienta rosa","Toronja","Yuzu"], mid:["Hoja de violeta","Notas marinas"], base:["Ámbar","Amberwood","Madera de guayacán"], badge:null, precios:{"3":"$45 MXN","5":"$65 MXN","10":"$110 MXN"} },
 
-  { id:6, nombre:"Le Male Elixir", marca:"Jean Paul Gaultier",imagen:"images/jpg_elixir.png",categoria:"oriental", desc:"El marinero más seductor. Lavanda fresca y menta explosiva se transforman en una base de tonka, benjuí y miel increíblemente adictiva. Beast mode en la piel.", uso:"Noches · Otoño-Invierno · Citas", duracion:"10+ horas", proyeccion:"Fuerte", familia:"Ámbar aromático", top:["Menta","Lavanda"], mid:["Tonka bean","Benjuí"], base:["Miel","Tabaco","Vainilla"], badge:"Bestseller", precios:{"3":"$105 MXN","5":"$175 MXN","10":"$310 MXN"} },
+  { id:27, nombre:"Club de Nuit Intense EDT", marca:"Armaf", imagen:"images/cdni_edt.png", categoria:"amaderado", desc:"El clon legendario de Creed Aventus. Explosión cítrica de limón, bergamota y piña negra sobre un corazón ahumado de abedul y jazmín, con una base de almizcle, patchulí y vainilla. Potencia beast mode.", uso:"Todo el año · Eventos · Citas · Diario", duracion:"8-10 horas", proyeccion:"Fuerte", familia:"Aromático amaderado", top:["Limón","Piña","Bergamota","Grosella negra","Manzana"], mid:["Abedul","Jazmín","Rosa"], base:["Almizcle","Ambergris","Pachulí","Vainilla"], badge:"Bestseller", precios:{"3":"$40 MXN","5":"$60 MXN","10":"$100 MXN"} },
 
-  { id:7, nombre:"Le Male le parfum", marca:"Jean Paul Gaultier",imagen:"images/jpg_leparfum.png",categoria:"oriental", desc:"El clásico moderno de la perfumería masculina. Lavanda, menta y vainilla en una composición icónica que ha conquistado millones de seguidores desde 1995.", uso:"Diario · Citas · Todo el año", duracion:"6-8 horas", proyeccion:"Media", familia:"Oriental fougère", top:["Menta","Lavanda","Cardamomo"], mid:["Orris","Canela","Flor de naranjo"], base:["Vainilla","Almizcle blanco","Sándalo"], badge:null, precios:{"3":"$105 MXN","5":"$175 MXN","10":"$310 MXN"} },
-
-  { id:8, nombre:"The Most Wanted EDP", marca:"Azzaro",imagen:"images/azzaro.png",categoria:"oriental", desc:"Dulce, especiado y magnéticamente seductor. Cardamomo y toffee se mezclan con una base amaderada irresistible. Fragancia de complidos garantizados.", uso:"Noches · Otoño-Invierno · Citas", duracion:"7-9 horas", proyeccion:"Media-fuerte", familia:"Oriental especiado", top:["Cardamomo"], mid:["Toffee"], base:["Ámbar","Madera"], badge:null, precios:{"3":"$80 MXN","5":"$125 MXN","10":"$210 MXN"} },
-
-  { id:9, nombre:"Acqua di Giò Profondo EDP", marca:"Giorgio Armani",imagen:"images/adg.png",categoria:"fresco", desc:"El Mediterráneo en su versión más profunda. Notas marinas y cítricas brillantes sobre lavanda, ciprés y una base amaderada con almizcle. Moderno y versátil.", uso:"Diario · Primavera-Verano · Oficina", duracion:"6-8 horas", proyeccion:"Media", familia:"Acuático aromático", top:["Notas marinas","Mandarina","Bergamota"], mid:["Lavanda","Ciprés","Romero"], base:["Pachulí","Almizcle","Incienso","Ámbar"], badge:null, precios:{"3":"$100 MXN","5":"$160 MXN","10":"$280 MXN"} },
-
-  { id:10, nombre:"Born in Roma Intense", marca:"Valentino",imagen:"images/valentino.png",categoria:"oriental", desc:"La masculinidad romana en su versión más intensa. Lavanda y vainilla bourbon se fusionan en una fragancia elegante, cálida y profundamente seductora.", uso:"Noches · Otoño-Invierno · Eventos", duracion:"8-10 horas", proyeccion:"Media-fuerte", familia:"Oriental vainilla", top:["Lavanda","Pimienta negra"], mid:["Iris","Geranio"], base:["Vainilla bourbon","Ámbar","Almizcle"], badge:null, precios:{"3":"$140 MXN","5":"$235 MXN","10":"$430 MXN"} },
-
-  { id:11, nombre:"Bleu de Chanel Parfum", marca:"Chanel",imagen:"images/bdc.png",categoria:"amaderado", desc:"El epítome de la elegancia masculina. Cítricos limpios y una base de cedro, sándalo e incienso crean la fragancia más icónica y versátil de los últimos años.", uso:"Todo el año · Oficina · Eventos · Citas", duracion:"8-10 horas", proyeccion:"Media", familia:"Aromático amaderado", top:["Bergamota","Lima","Limón","Menta"], mid:["Jengibre","Nuez moscada","Jazmín"], base:["Incienso","Cedro","Sándalo","Ámbar"], badge:"Clásico", precios:{"3":"$145 MXN","5":"$250 MXN","10":"$460 MXN"} },
-
-  { id:12, nombre:"Allure Homme Sport", marca:"Chanel",imagen:"images/allure.png",categoria:"fresco", desc:"El hombre activo y sofisticado. Cítricos vibrantes y notas frescas con base amaderada suave y especiada. Elegante, sin esfuerzo, para cualquier ocasión.", uso:"Diario · Verano · Primavera · Oficina", duracion:"5-7 horas", proyeccion:"Suave-media", familia:"Cítrico aromático", top:["Naranja","Limón","Mandarina"], mid:["Neroli","Almizcle"], base:["Vainilla","Cedro","Sándalo"], badge:null, precios:{"3":"$140 MXN","5":"$235 MXN","10":"$430 MXN"} },
-
-  { id:13, nombre:"Bad Boy Cobalt", marca:"Carolina Herrera",imagen:"images/colbalt.png",categoria:"fresco", desc:"Audaz y moderno. Una apertura dulce afrutada con un corazón fresco y especiado que se convierte en una base amaderada oscura e irresistible. Ideal para destacar.", uso:"Diario · Citas · Eventos · Verano", duracion:"7-9 horas", proyeccion:"Media-fuerte", familia:"Aromático amaderado", top:["Lavanda","Ciruela"], mid:["Cedro","Vetiver"], base:["Madera","Almizcle"], badge:null, precios:{"3":"$110 MXN","5":"$175 MXN","10":"$310 MXN"} },
-
-  { id:14, nombre:"Invictus Victory Elixir", marca:"Paco Rabanne",imagen:"images/invictus.png",categoria:"oriental", desc:"La victoria en su forma más intensa. Coco cremoso, vainilla y especias sobre una base profunda y envolvente. El ganador absoluto de los complidos nocturnos.", uso:"Noches · Otoño-Invierno · Eventos", duracion:"8-10 horas", proyeccion:"Fuerte", familia:"Oriental amaderado", top:["Coco","Especias"], mid:["Vainilla","Sándalo"], base:["Ámbar","Almizcle","Pachulí"], badge:"Exclusivo", precios:{"3":"$115 MXN","5":"$190 MXN","10":"$340 MXN"} },
-
-  { id:15, nombre:"Sauvage EDT", marca:"Dior",imagen:"images/sauvage.png",categoria:"fresco", desc:"El salvaje más elegante del mundo. Bergamota calabresa y pimienta Sichuan sobre una base de ambroxan y cedro. La fragancia masculina más vendida del planeta.", uso:"Todo el año · Diario · Oficina · Citas", duracion:"6-9 horas", proyeccion:"Fuerte", familia:"Aromático fresco", top:["Bergamota de Calabria","Pimienta Sichuan"], mid:["Lavanda","Vetiver","Geranio"], base:["Ambroxan","Cedro","Labdanum"], badge:"Más vendido", precios:{"3":"$115 MXN","5":"$190 MXN","10":"$340 MXN"} },
-
-  { id:16, nombre:"Explorer Platinum", marca:"Montblanc",imagen:"images/montblanc.png",categoria:"fresco", desc:"La aventura a gran altitud. Hojas de violeta, salvia y cedro de Alaska crean una fragancia fresca, sofisticada y limpia para el hombre moderno.", uso:"Diario · Oficina · Primavera", duracion:"6-8 horas", proyeccion:"Media", familia:"Aromático amaderado", top:["Hojas de violeta","Toronja"], mid:["Salvia","Ciprés","Musgo"], base:["Cedro de Alaska","Ámbar","Almizcle"], badge:null, precios:{"3":"$80 MXN","5":"$115 MXN","10":"$190 MXN"} },
-
-  { id:17, nombre:"Dior Homme Cologne", marca:"Dior",imagen:"images/homme.png",categoria:"fresco", desc:"El dandy francés en su versión más ligera y luminosa. Toronja fresca y bergamota con un corazón floral de iris sutil. Elegancia pura y sin esfuerzo.", uso:"Diario · Primavera-Verano · Oficina", duracion:"4-6 horas", proyeccion:"Suave", familia:"Cítrico floral", top:["Toronja","Bergamota"], mid:["Iris","Salvia"], base:["Vetiver","Cedro","Almizcle"], badge:null, precios:{"3":"$120 MXN","5":"$195 MXN","10":"$350 MXN"} },
-
-  { id:18, nombre:"MYSLF Le Parfum", marca:"Yves Saint Laurent",imagen:"images/ysl.png",categoria:"floral", desc:"La masculinidad moderna redefinida. Flor de naranjo absoluta de Túnez y bergamota sobre una base de madera cálida, pimienta negra y vainilla bourbon adictiva.", uso:"Todo el año · Citas · Eventos · Oficina", duracion:"7-9 horas", proyeccion:"Media", familia:"Floral amaderado", top:["Bergamota","Pimienta negra"], mid:["Flor de naranjo absoluta"], base:["Madera","Vainilla bourbon","Pachulí"], badge:"Trendy", precios:{"3":"$135 MXN","5":"$225 MXN","10":"$410 MXN"} },
-
-  { id:19, nombre:"Full House", marca:"Game of Spades · Jo Milano",imagen:"images/fullhouse.png",categoria:"fresco", desc:"Cítricos sicilianos electrizantes con especias cálidas y una base amaderada oscura e intrigante. Proyección notable y versátil. Inspirado en Louis Vuitton Imagination.", uso:"Diario · Primavera-Verano · Todo el año", duracion:"5-7 horas", proyeccion:"Media-fuerte", familia:"Cítrico especiado", top:["Citron","Bergamota","Naranja de Sicilia"], mid:["Jengibre","Neroli","Canela"], base:["Té negro","Ambroxan","Madera de guayacán","Olíbano"], badge:null, precios:{"3":"$105 MXN","5":"$170 MXN","10":"$300 MXN"} },
-
-  { id:20, nombre:"Wildcard", marca:"Game of Spades · Jo Milano",imagen:"images/wildcard.png",categoria:"floral", desc:"La carta inesperada. Bergamota y coriandro frescos fluyen hacia un corazón de manzana y vainilla, terminando en una base amaderada cálida. Unisex y muy versátil.", uso:"Todo el año · Diario · Eventos", duracion:"6-8 horas", proyeccion:"Media", familia:"Floral amaderado", top:["Bergamota","Flores","Coriandro"], mid:["Manzana","Ambroxan","Vainilla"], base:["Tonka bean","Ambergris","Madera"], badge:null, precios:{"3":"$100 MXN","5":"$160 MXN","10":"$285 MXN"} },
-
-  { id:21, nombre:"Esmeralda", marca:"Game of Spades · Jo Milano",imagen:"images/emerald.png",categoria:"fresco", desc:"Frescura brillante y limpia. Bergamota, toronja y jengibre abren paso a un corazón floral de azahar y neroli, terminando en almizcle suave y moderno. Elegancia accesible.", uso:"Diario · Primavera-Verano · Oficina", duracion:"6-7 horas", proyeccion:"Media", familia:"Cítrico floral", top:["Bergamota","Toronja","Jengibre"], mid:["Flor de naranjo","Neroli","Jengibre"], base:["Almizcle","Ambrette"], badge:null, precios:{"3":"$105 MXN","5":"$170 MXN","10":"$300 MXN"} },
-
-  { id:22, nombre:"Rouge", marca:"Game of Spades · Jo Milano",imagen:"images/rouge.png",categoria:"oriental", desc:"El dupe más querido del Baccarat Rouge 540. Dulce, cálido y sumamente envolvente. Amberwood y ambergris crean un rastro mágico e inolvidable. Para quien quiere impactar.", uso:"Noches · Eventos · Citas · Otoño-Invierno", duracion:"8-10 horas", proyeccion:"Media-fuerte", familia:"Floral amaderado", top:["Jazmín","Bergamota","Lavanda"], mid:["Amberwood","Ambergris"], base:["Notas amaderadas","Almizcle"], badge:"Fan Fav", precios:{"3":"$95 MXN","5":"$145 MXN","10":"$250 MXN"} }
+  { id:28, nombre:"9PM", marca:"Afnan", imagen:"images/9pm.png", categoria:"oriental", desc:"El rey de la noche a precio accesible. Inspirado en Yves Saint Laurent La Nuit de L'Homme, combina lavanda, manzana y canela en una base irresistible de vainilla, tonka bean y ámbar. Cumplidos asegurados.", uso:"Noches · Otoño-Invierno · Citas · Eventos", duracion:"8-10 horas", proyeccion:"Fuerte", familia:"Oriental vainilla", top:["Manzana","Canela","Lavanda silvestre","Bergamota"], mid:["Azahar","Lirio de los valles"], base:["Vainilla","Tonka bean","Ámbar","Pachulí"], badge:"Fan Fav", precios:{"3":"$40 MXN","5":"$60 MXN","10":"$100 MXN"} }
 ];
 
 var selectedSize = null;
@@ -391,15 +340,16 @@ function renderCatalog(filter) {
     var card = document.createElement('div');
     card.className = 'perfume-card';
     card.innerHTML =
-     '<div class="card-img-placeholder" style="overflow: hidden;">' +
-    '<img src="' + p.imagen + '" style="width: 100%; height: 100%; object-fit: cover;">' +
-'</div>' +
-(p.badge ? '<div class="card-badge">' + p.badge + '</div>' : '') +
-        '<div class="card-brand">' + p.marca + '</div>' +
-        '<div class="card-name">' + p.nombre + '</div>' +
-        '<div class="card-desc">' + p.desc.substring(0,90) + '...</div>' +
-        '<div class="card-tags"><span class="tag">' + p.familia + '</span><span class="tag">' + p.proyeccion + '</span></div>' +
-        '<button class="card-btn" onclick="openModal(' + p.id + ')">Ver detalles</button>' +
+      '<div class="card-img">' +
+      '<img src="' + p.imagen + '" alt="' + p.nombre + '" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display=\'none\'">' +
+      (p.badge ? '<div class="card-badge">' + p.badge + '</div>' : '') +
+      '</div>' +
+      '<div class="card-body">' +
+      '<div class="card-brand">' + p.marca + '</div>' +
+      '<div class="card-name">' + p.nombre + '</div>' +
+      '<div class="card-desc">' + p.desc.substring(0,90) + '...</div>' +
+      '<div class="card-tags"><span class="tag">' + p.familia + '</span><span class="tag">' + p.proyeccion + '</span></div>' +
+      '<button class="card-btn" onclick="openModal(' + p.id + ')">Ver detalles</button>' +
       '</div>';
     grid.appendChild(card);
   }
@@ -418,7 +368,9 @@ function openModal(id) {
   if (!p) return;
   currentPerfume = p;
   selectedSize = null;
- document.getElementById('modalLetter').innerHTML = '<img src="' + p.imagen + '" style="width:100%; height:100%; object-fit:cover; border-radius:1.2rem 1.2rem 0 0;">';  document.getElementById('modalBrand').textContent = p.marca;
+  var modalLetter = document.getElementById('modalLetter');
+  modalLetter.innerHTML = '<img src="' + p.imagen + '" style="width:100%;height:100%;object-fit:cover;border-radius:1.2rem 1.2rem 0 0;" onerror="this.style.display=\'none\'">';
+  document.getElementById('modalBrand').textContent = p.marca;
   document.getElementById('modalName').textContent = p.nombre;
   document.getElementById('modalDesc').textContent = p.desc;
   document.getElementById('modalUso').textContent = p.uso;
